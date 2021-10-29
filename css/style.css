@@ -139,7 +139,7 @@ body {
 h2 {
     color: #333333;
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+    
     font-weight: 500;
     justify-self: start;
     line-height: 124%;
@@ -147,7 +147,7 @@ h2 {
 h3 {
     font-size: 20px;
     color: #333333;
-    font-family: 'Montserrat', sans-serif;
+    
     font-weight: 500;
     line-height: 150%;
 }
@@ -155,6 +155,12 @@ img {
     display: block;
     width: 100%;
     height: auto;
+}
+.button:hover {
+    background-color: #02A7EA;
+}
+.button:focus {
+    background-color: #046E9A;
 }
 .header {
     display: grid;
@@ -167,7 +173,7 @@ img {
     width: 54px;
     height: 33px;
 }
-.burger_menu {
+.burger_menu_wraper {
     justify-self: end;
 }
 .burger_checkbox {
@@ -176,7 +182,7 @@ img {
 input[type="checkbox"]:checked + label:after {
     display: none;
 }
-.burger_checkbox:checked ~ .wraper_menu {
+.burger_checkbox:checked ~ .burger_menu {
     top: 0;
     bottom: 0;
     left: 0;
@@ -200,7 +206,7 @@ input[type="checkbox"]:checked + label:after {
     width: 24px;
     height: 24px;
 }
-.wraper_menu {
+.burger_menu {
     background-color: rgba(17, 17, 17, 0.9);
     position: fixed;
     top: 0;
@@ -219,7 +225,7 @@ input[type="checkbox"]:checked + label:after {
     width: 70px;
     height: 44px;
 }
-.wraper_menu_link {
+.burger_menu_link {
     display: block;
     text-decoration: none;
     color: #ffffff;
@@ -252,10 +258,8 @@ input[type="checkbox"]:checked + label:after {
     display: grid;
     row-gap: 24px;
 }
-
 .adt_main_title {
     font-size: 28px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 150%;
 }
@@ -270,7 +274,7 @@ input[type="checkbox"]:checked + label:after {
     display: grid;
     row-gap: 16px;
 }
-.mail {
+.input_mail {
     outline: none;
 	border: none;
     box-sizing: border-box;
@@ -279,11 +283,16 @@ input[type="checkbox"]:checked + label:after {
     height: 56px;
     width: 100%;
 }
-.mail::placeholder {
+.input_mail:hover, .input_mail:focus {
+    border: 1px solid #2B27F6;
+    color: #000000;
+}
+.input_mail::placeholder {
     font-size: 18px;
     color: #959494;
     opacity: 0.72;
     letter-spacing: 1.4px;
+    font-family: 'Montserrat', sans-serif;
 }
 .button {
     border: none;
@@ -296,7 +305,7 @@ input[type="checkbox"]:checked + label:after {
     width: 100%;
     font-size: 18px;
 }
-.philosophy_img, .philosophy_img img, .about_us_post_img, .about_us_post_img img {
+.philosophy_img, .about_us_post_img {
     width: 100%;
 }
 .adt_wraper {
@@ -334,25 +343,25 @@ input[type="checkbox"]:checked + label:after {
     margin-top: 94px;
 }
 .carousel {
-    width: 100vw;
     height: 546px;
-    padding: 0 20px 0 4px;
 }
 .carousel__button {
     display: none;
 }
 .carousel__slide {
     width: 100%;
-    height: 100%;
-    padding: 0 16px;
     display: grid;
     justify-items: center;
 }
-.carousel__slide:first-of-type {
-    padding: 0 8px 0 16px;
+.carousel__track:first-child {
+    padding-left: 20px;
 }
-.carousel__slide:last-of-type {
-    padding: 0 0 0 16px;
+.carousel__track:last-child {
+    padding-right: 20px;
+}
+.carousel__slide.is-selected {
+    padding-left: 0;
+    padding-right: 0;
 }
 .carousel__track, .carousel__slide, .carousel__slide img {
     min-height: 546px;
