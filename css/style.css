@@ -257,6 +257,7 @@ input[type="checkbox"]:checked + label:after {
     row-gap: 24px;
 }
 .adt_main_wraper {
+    justify-items: stretch;
     grid-template-areas: 
     "adt_main_img"
     "adt_main";
@@ -398,12 +399,14 @@ input[type="checkbox"]:checked + label:after {
 .footer {
     background-color: #333333;
     color: #ffffff;
+}
+.footer_container {
     display: grid;
     justify-content: center;
     justify-items: center;
     padding-top: 45px;
     padding-bottom: 54px;
-    gap: 32px;
+    gap: 32px;   
 }
 .email_wraper, .address_wraper {
     display: grid;
@@ -572,7 +575,7 @@ input[type="checkbox"]:checked + label:after {
     .copywrite {
         grid-area: copywrite;
     }
-    .footer {
+    .footer_container {
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas: 
         "footer_logo contacts social_menu_footer"
@@ -638,11 +641,14 @@ input[type="checkbox"]:checked + label:after {
     .container {
         width: 1140px;
     }
+    .adt_main {
+        padding-right: 130px;
+    }
 }
 
 
 
-
+/* 
 
 
 .cards_container {
@@ -654,4 +660,4 @@ input[type="checkbox"]:checked + label:after {
     grid-template-areas: 
         " . card_second . "
         "card_first card_second card_third";
-}
+} */
