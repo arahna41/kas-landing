@@ -314,6 +314,7 @@ input[type="checkbox"]:checked + label:after {
     height: 56px;
     width: 100%;
     font-size: 18px;
+    transition: all 0.3s linear;
 }
 .philosophy_img, .about_us_post_img {
     width: 100%;
@@ -395,6 +396,10 @@ input[type="checkbox"]:checked + label:after {
 }
 .adt_3_wraper {
     margin-top: 54px;
+    background: url(../images/adt_3/image8.png) no-repeat;
+    background-position: 0% 50%;
+    background-size: 49% 100%;
+    background-color: #7CB0C5;
 }
 .footer {
     background-color: #333333;
@@ -453,7 +458,7 @@ input[type="checkbox"]:checked + label:after {
         margin: 0 auto;
     }
     .header {
-        height: 128px;
+        height: 117px;
     }
    .logo_mobile_header, .burger_checkbox, .burger_button {
        display: none;
@@ -464,7 +469,7 @@ input[type="checkbox"]:checked + label:after {
        height: 128px;
        background-color: transparent;
        padding-top: 0;
-       grid-template: 1fr / 1fr 4fr 1fr;
+       grid-template: 1fr / 1fr 2fr 1fr;
        justify-items: stretch;
        align-items: center;
        position: absolute;
@@ -482,13 +487,16 @@ input[type="checkbox"]:checked + label:after {
         width: 72px;
         height: 45px;
     }
+    .social_menu {
+        justify-content: end;
+    }
     .adt_main, .about_us {
         padding-left: 0;
         padding-right: 0;
     }
     .adt_main_wraper {
         align-items: center;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 51% 49%;
         grid-template-areas: 
             "adt_main adt_main_img"
     }
@@ -538,9 +546,9 @@ input[type="checkbox"]:checked + label:after {
     .adt_wraper_text {
         padding-top: 0;
     }
-    .adt_2_wraper {
+    .adt_2_wraper_container {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 51% 49%;
         grid-template-areas: 
             "adt_2_wraper_text parent_adt_2_img"
     }
@@ -554,14 +562,23 @@ input[type="checkbox"]:checked + label:after {
     .about_us_post_img_even {
         grid-area: about_us_post_img_even;
     }
+    .about_us_post_odd {
+        grid-template-rows: 1fr 400px;
+    }
     .about_us_post_even {
+        grid-template-rows: 400px 1fr;
         grid-template-areas: 
         "about_us_post_img_even"
         "about_us_text_block_even";
     }
-    .adt_3_wraper {
+    .adt_3_wraper_container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 49% 51%;
+        grid-template-areas: 
+            " . adt_3_wraper_text";
+    }
+    .adt_3_wraper_text {
+        grid-area: adt_3_wraper_text;
     }
     .footer_logo {
         grid-area: footer_logo;
@@ -639,25 +656,82 @@ input[type="checkbox"]:checked + label:after {
 }
 @media screen and (min-width: 1200px) {
     .container {
-        width: 1140px;
+        width: 1170px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 150%;
+    }
+    .burger_menu_link:hover {
+        color: #7CB0C5;;
+    }
+    .adt_main_text, .adt_2_wraper_text_desc {
+        font-size: 20px;
+    }
+    .philosophy, .adt_2_wraper, .about_us, .showcase {
+        margin-top: 200px;
     }
     .adt_main {
-        padding-right: 130px;
+        padding: 95px 130px 95px 0;
+        row-gap: 32px;
     }
+    .adt_main_title {
+        font-size: 46px;
+    }
+    .adt_main_form, .adt_2_form {
+        gap:0;
+        grid-template: 1fr / 301px 170px;
+    }
+    .parent_img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .parent_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .philosophy  {
+        gap: 80px;
+    }
+    .philosophy_content_img {
+        height: 614px;
+    }
+    .philosophy_post {
+        align-items: start;
+    }
+    .philosophy_post_text {
+        gap: 48px;
+    }
+    .adt_wraper {
+        background-color: #7CB0C5;
+    }
+    .adt_2_wraper_text {
+        padding: 120px 130px 120px 0;
+        gap: 32px;
+    }
+    .about_us {
+        gap: 80px;
+    }
+    .about_us_post, .about_us_text_block {
+        gap: 48px;
+    }
+    .showcase {
+        gap: 80px;
+    }
+    .showcase_post {
+        gap: 0;
+    }
+    .showcase_post_text_desktop {
+        display: grid;
+    }
+    .adt_3_wraper {
+        margin-top: 124px;
+    }
+    .adt_3_wraper_text {
+        padding: 210px 0 210px 130px;
+        align-content: center;
+    }
+    
 }
-
-
-
-/* 
-
-
-.cards_container {
-    display: grid;
-    grid-template-columns: [first] 327px [second] 327px [third] 327px [end];
-    grid-template-rows: 40px 665px;
-    justify-content: center;
-    column-gap: 1px;
-    grid-template-areas: 
-        " . card_second . "
-        "card_first card_second card_third";
-} */
