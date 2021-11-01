@@ -466,6 +466,12 @@ input[type="checkbox"]:checked + label:after {
     background-position: 24px 0;
 }
 
+@media screen and (min-width: 576px) {
+    .adt_3_img {
+        min-height: 325px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .container {
         width: 720px;
@@ -611,6 +617,7 @@ input[type="checkbox"]:checked + label:after {
         grid-area: copywrite;
     }
     .footer_container {
+        justify-items: normal;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas: 
         "footer_logo contacts social_menu_footer"
@@ -653,6 +660,9 @@ input[type="checkbox"]:checked + label:after {
     .carousel__slide img {
         height: 100%;
     }
+    .adt_wraper_text {
+        padding-right: 0;
+    }
     .adt_3_wraper {
         grid-template-columns: 49% 51%;
     }
@@ -661,6 +671,27 @@ input[type="checkbox"]:checked + label:after {
         background: url(../images/adt_3/image8.png) no-repeat;
         background-position: 50% 0%;
         background-size: cover;
+    }
+    .adt_3_wraper {
+        position: relative;
+    }
+    .absolute {
+        position: absolute;
+        width: 720px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .adt_3_wraper_text {
+        position: absolute;
+        top: 50%;
+        width: 44%;
+        transform: translate(0, -50%);
+        right: 0;
+    }
+    .aadt_3_wraper_text_desc {
+        padding-bottom: 24px;
+        padding-top: 24px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -676,6 +707,13 @@ input[type="checkbox"]:checked + label:after {
     }
     .adt_3_img {
         min-height: 865px;
+    }
+    .absolute {
+        width: 960px;
+    }
+    .adt_3_wraper_text_desc {
+        padding-bottom: 32px;
+        padding-top: 32px;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -776,4 +814,26 @@ input[type="checkbox"]:checked + label:after {
     .adt_3_img {
         min-height: 865px;
     }
+    .adt_3_wraper {
+        position: relative;
+    }
+    .absolute {
+        position: absolute;
+        width: 1170px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .adt_3_wraper_text {
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 0;
+    }
+    .adt_3_wraper_text_desc {
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
 }
+
