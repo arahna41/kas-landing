@@ -320,6 +320,9 @@ input[type="checkbox"]:checked + label:after {
     font-size: 18px;
     transition: all 0.3s linear;
 }
+.philosophy {
+    padding-bottom: 34px;
+}
 .philosophy_img, .about_us_post_img {
     width: 100%;
 }
@@ -331,18 +334,18 @@ input[type="checkbox"]:checked + label:after {
 .adt_form_mail {
     border: solid 1px transparent;
 }
-.adt_2_wraper {
+.adt_2_wraper, .adt_3_wraper {
     display: grid;
+    background-color: #7CB0C5;
 }
 .adt_2_img {
     min-height: 239px;
-    margin-top: 34px;
+   
     background: url(../images/adt_2/image\ 5.png) no-repeat;
     background-position: 50% 0;
     background-size: cover;
 }
 .adt_2_wraper_text {
-    background-color: #7CB0C5;
     padding-top: 45px;
 }
 .adt_wraper_text {
@@ -405,9 +408,12 @@ input[type="checkbox"]:checked + label:after {
 .carousel__dots .carousel__dot.is-selected:after {
     background: #333333;
 }
-.adt_3_wraper {
-    display: grid;
-    background-color: #7CB0C5;
+.adt_3_wraper_text {
+    padding: 45px 20px;
+}
+.adt_3_wraper_text_desc {
+    padding-bottom: 24px;
+    padding-top: 24px;
 }
 .adt_3_img {
     min-height: 239px;
@@ -467,7 +473,7 @@ input[type="checkbox"]:checked + label:after {
 }
 
 @media screen and (min-width: 576px) {
-    .adt_3_img {
+    .adt_2_img,.adt_3_img {
         min-height: 325px;
     }
 }
@@ -565,21 +571,32 @@ input[type="checkbox"]:checked + label:after {
             "philosophy_img_even philosophy_post_text_even"
     }
     .adt_2_img {
-        min-height: 420px;
-        margin-top: 0;
-        background-position: 50% 0;
+        min-height: 562px;
+        background-position: 50% 0%;
         background-size: cover;
+    }
+    .adt_2_wraper {
+        grid-template-columns: 49% 51%;
+        grid-template-areas: 
+            "empty adt_2_img";
+    }
+    .adt_2_img {
+        margin-top: 0;
         grid-area: adt_2_img;
     }
     .adt_2_wraper_text {
-        background-color: #7CB0C5;
-        padding-top: 45px;
-        grid-area: adt_2_wraper_text;
+        position: absolute;
+        width: 40%;
+        top: 50%;
+        transform: translate(0, -50%);
+        left: 0;
+        padding: 0;
     }
-    .adt_2_wraper {
-        grid-template: auto / 1fr 1fr;
-        grid-template-areas: 
-            "adt_2_wraper_text adt_2_img";
+    .adt_2_wraper_text_title, .adt_3_wraper_text_title {
+        justify-self: left;
+    }
+    .empty {
+        grid-area: empty;
     }
     .adt_wraper_text {
         padding-top: 0;
@@ -689,7 +706,7 @@ input[type="checkbox"]:checked + label:after {
         transform: translate(0, -50%);
         right: 0;
     }
-    .aadt_3_wraper_text_desc {
+    .adt_3_wraper_text_desc {
         padding-bottom: 24px;
         padding-top: 24px;
     }
@@ -698,12 +715,15 @@ input[type="checkbox"]:checked + label:after {
     .container {
         width: 960px;
     }
-    .adt_main_form, .adt_2_form {
+    .adt_main_form {
         gap: 0;
         grid-template: 1fr / 301px 170px;
     }
     .adt_2_img {
         min-height: 562px;
+    }
+    .adt_2_wraper_text {
+        width: 40%;
     }
     .adt_3_img {
         min-height: 865px;
@@ -726,6 +746,10 @@ input[type="checkbox"]:checked + label:after {
     }
     .adt_main_text, .adt_2_wraper_text_desc {
         font-size: 20px;
+    }
+    .adt_2_form {
+        gap: 0;
+        grid-template: 1fr / 301px 170px;
     }
     .philosophy, .adt_2_wraper, .about_us, .showcase {
         margin-top: 200px;
@@ -771,10 +795,7 @@ input[type="checkbox"]:checked + label:after {
         background-color: #7CB0C5;
     }
     .adt_2_wraper_text {
-        padding: 120px 130px 120px 0;
-    }
-    .adt_2_img {
-        min-height: 562px;
+        width: 40%;
     }
     .about_us {
         gap: 80px;
@@ -837,3 +858,34 @@ input[type="checkbox"]:checked + label:after {
     }
 }
 
+
+
+
+.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.9);
+}
+.window {
+    position: absolute;
+    width: 442px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    background-color: white;
+}
+.window_text {
+    background-color: #7CB0C5;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    padding: 44px 52px 47px;
+}
+.first_line_window {
+    padding-bottom: 21px;
+}
