@@ -576,7 +576,7 @@ input[type="checkbox"]:checked + label:after {
         background-size: cover;
     }
     .adt_2_wraper {
-        grid-template-columns: 49% 51%;
+        grid-template-columns: 51% 49%;
         grid-template-areas: 
             "empty adt_2_img";
     }
@@ -705,6 +705,7 @@ input[type="checkbox"]:checked + label:after {
         width: 44%;
         transform: translate(0, -50%);
         right: 0;
+        padding: 0;
     }
     .adt_3_wraper_text_desc {
         padding-bottom: 24px;
@@ -715,7 +716,7 @@ input[type="checkbox"]:checked + label:after {
     .container {
         width: 960px;
     }
-    .adt_main_form {
+    .adt_main_form, .adt_2_form {
         gap: 0;
         grid-template: 1fr / 301px 170px;
     }
@@ -860,7 +861,7 @@ input[type="checkbox"]:checked + label:after {
 
 
 
-
+/* pop-up */
 .fixed {
     position: fixed;
     top: 0;
@@ -877,9 +878,14 @@ input[type="checkbox"]:checked + label:after {
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 15;
-    background-color: white;
+    background: url(../images/pop-up/image2.png);
+    background-size: cover;
 }
 .window_text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #7CB0C5;
     color: #ffffff;
     text-align: center;
