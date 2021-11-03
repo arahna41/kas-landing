@@ -23,9 +23,18 @@ function btnClick() {
 
 const cross = document.querySelector(".close");
 
-cross.addEventListener("click", btnClick);
+cross.addEventListener("click", crossClick);
 
 function crossClick() {
+    console.log(content.classList);
+    content.classList.add("fixed_none");
+}
+
+const field = document.querySelector(".fixed");
+
+field.addEventListener("click", fieldClick);
+
+function fieldClick() {
     console.log(content.classList);
     content.classList.add("fixed_none");
 }
