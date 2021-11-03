@@ -658,7 +658,7 @@ input[type="checkbox"]:checked + label:after {
         position: relative;
     }
     .adt_3_img {
-        min-height: 562px;
+        min-height: 410px;
         background: url(../images/adt_3/image8.png) no-repeat;
         background-position: 50% 0%;
         background-size: cover;
@@ -724,7 +724,7 @@ input[type="checkbox"]:checked + label:after {
         width: 40%;
     }
     .adt_3_img {
-        min-height: 865px;
+        min-height: 600px;
     }
     .adt_3_wraper_text_desc {
         padding-bottom: 32px;
@@ -745,7 +745,7 @@ input[type="checkbox"]:checked + label:after {
     .adt_main_title {
         font-size: 46px;
     }
-    .adt_main_form, .adt_2_form {
+    .adt_2_form {
         gap: 0;
         grid-template: 1fr / 301px 170px;
     }
@@ -822,7 +822,7 @@ input[type="checkbox"]:checked + label:after {
         align-content: center;
     }
     .adt_3_img {
-        min-height: 865px;
+        min-height: 690px;
     }
     .absolute {
         width: 1170px;
@@ -839,6 +839,22 @@ input[type="checkbox"]:checked + label:after {
 
 
 /* pop-up */
+.modal_button {
+    text-align: center;
+    display: block;
+    border: none;
+    font: inherit;
+    background-color: #111111;
+    color: #ffffff;
+    cursor: pointer;
+    height: auto;
+    width: 100%;
+    font-size: 18px;
+    transition: all 0.3s linear;
+}
+.modal_checkbox {
+    display: none;
+}
 .fixed {
     position: fixed;
     top: 0;
@@ -846,6 +862,10 @@ input[type="checkbox"]:checked + label:after {
     bottom: 0;
     left: 0;
     background: rgba(17, 17, 17, 0.9);
+    z-index: 998;
+}
+.fixed_none {
+    display: none;
 }
 .window {
     position: absolute;
@@ -857,6 +877,10 @@ input[type="checkbox"]:checked + label:after {
     z-index: 15;
     background: url(../images/pop-up/image2.png);
     background-size: cover;
+    z-index: 999;
+    display: grid;
+    justify-content: end;
+    align-content: start;
 }
 .window_text {
     position: absolute;
@@ -871,4 +895,13 @@ input[type="checkbox"]:checked + label:after {
 }
 .first_line_window {
     padding-bottom: 21px;
+}
+.close {
+    background: url(../images/pop-up/Vector\ 5.png);
+    width: 15px;
+    height: 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-right: 22px;
 }
