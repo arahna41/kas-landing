@@ -34,6 +34,16 @@ for (var i = 0; i < linkNav.length; i++) {
     }, false);
 }
 
+const link = document.querySelector(".burger_menu_link");
+const burgerCheckbox = document.querySelector(".burger_checkbox");
+
+link.addEventListener("click", linkClick);
+
+function linkClick() {
+    console.log(content.classList);
+    burgerCheckbox.classList.toggle("checked");
+}
+
 const btn = document.querySelector(".button");
 const content = document.querySelector(".fixed");
 

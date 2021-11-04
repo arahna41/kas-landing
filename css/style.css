@@ -444,20 +444,20 @@ input[type="checkbox"]:checked + label:after {
     column-gap: 24px;
     justify-content: center;
 }
+.instagram {
+    background: url(../images/footer/instagram.png);
+}
+.twitter {
+    background: url(../images/footer/twitter.png);
+}
+.facebook {
+    background: url(../images/footer/facebook.png);
+}
 .link_social_menu {
     display: block;
     width: 24px;
     height: 24px;
-    background: url(../images/footer/Соц.сети.png);
-}
-.instagram {
-    background-position: 0 0;
-}
-.twitter {
-    background-position: -48px 0;
-}
-.facebook {
-    background-position: 24px 0;
+    background-size: contain;
 }
 
 @media screen and (min-width: 576px) {
@@ -486,7 +486,7 @@ input[type="checkbox"]:checked + label:after {
        height: 128px;
        background-color: transparent;
        padding-top: 0;
-       grid-template: 1fr / 1fr 2fr 1fr;
+       grid-template: 1fr / 1fr 4fr 1fr;
        justify-items: stretch;
        align-items: center;
        position: absolute;
@@ -710,6 +710,9 @@ input[type="checkbox"]:checked + label:after {
     .container {
         width: 960px;
     }
+    .burger_menu {
+        grid-template: 1fr / 1fr 2fr 1fr;
+     }
     .adt_main_form, .adt_2_form {
         gap: 0;
         grid-template: 1fr / 301px 170px;
