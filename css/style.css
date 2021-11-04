@@ -1,907 +1,816 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
-/* css-reset */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 /* general style */
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 150%;
-    font-size: 14px;
-    font-size: calc((100vw - 320px) / (1440 - 320) * (18 - 14) + 14px);
+  font-family: "Montserrat", sans-serif;
+  line-height: 150%;
+  font-size: 14px;
+  font-size: calc((100vw - 320px) / (1440 - 320) * (18 - 14) + 14px);
 }
-.adt_main, .philosophy_title, .philosophy_post, .adt_wraper_text, .about_us, .showcase_title, .showcase_post_text {
-    padding-left: 20px;
-    padding-right: 20px;
+.adt_main,
+.philosophy_title,
+.philosophy_post,
+.adt_wraper_text,
+.about_us,
+.showcase_title,
+.showcase_post_text {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 h2 {
-    color: #333333;
-    font-size: calc((100vw - 320px) / (1440 - 320) * (40 - 24) + 24px);
-    font-weight: 500;
-    justify-self: start;
-    line-height: 124%;
+  color: #333333;
+  font-size: calc((100vw - 320px) / (1440 - 320) * (40 - 24) + 24px);
+  font-weight: 500;
+  justify-self: start;
+  line-height: 124%;
 }
 h3 {
-    font-size: calc((100vw - 320px) / (1440 - 320) * (32 - 20) + 20px);
-    color: #333333;
-    font-weight: 500;
-    line-height: 150%;
+  font-size: calc((100vw - 320px) / (1440 - 320) * (32 - 20) + 20px);
+  color: #333333;
+  font-weight: 500;
+  line-height: 150%;
 }
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .button:hover {
-    background-color: #02A7EA;
+  background-color: #02a7ea;
 }
 .button:focus {
-    background-color: #046E9A;
+  background-color: #046e9a;
 }
 .header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 11px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 11px;
 }
 .logo_mobile_header {
-    margin-left: 14px;
-    padding: 6px;
-    width: 54px;
-    height: 33px;
+  margin-left: 14px;
+  padding: 6px;
+  width: 54px;
+  height: 33px;
 }
 .burger_menu_wraper {
-    justify-self: end;
+  justify-self: end;
 }
 .burger_checkbox {
-    display: none;
+  display: none;
 }
 input[type="checkbox"]:checked + label:after {
-    display: none;
+  display: none;
 }
 .burger_checkbox:checked ~ .burger_menu {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 .burger_button {
-    width: 35px;
-    height: 25px;
-    background: url(../images/header/Vector.png) no-repeat;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 15;
+  width: 35px;
+  height: 25px;
+  background: url(../images/header/Vector.png) no-repeat;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 15;
 }
 .burger_checkbox:checked ~ .burger_button {
-    background: url(../images/header/Vector-1.png) no-repeat;
-    z-index: 15;
-    position: fixed;
-    width: 24px;
-    height: 24px;
+  background: url(../images/header/Vector-1.png) no-repeat;
+  z-index: 15;
+  position: fixed;
+  width: 24px;
+  height: 24px;
 }
 .burger_menu {
-    background-color: rgba(17, 17, 17, 0.9);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: -100%;
-    left: 100%;
-    transition: all 0.3s linear;
-    z-index: 5;
-    display: grid;
-    align-content: start;
-    justify-items: center;
-    gap: 45px;
-    padding-top: 108px;
+  background-color: rgba(17, 17, 17, 0.9);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  left: 100%;
+  transition: all 0.3s linear;
+  z-index: 5;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 45px;
+  padding-top: 108px;
 }
-.menu_logo, .footer_logo {
-    width: 70px;
-    height: 44px;
+.menu_logo,
+.footer_logo {
+  width: 70px;
+  height: 44px;
 }
 .burger_menu_link {
-    display: block;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 500;
-    transition: all 0.3s linear;
-    font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: all 0.3s linear;
+  font-size: 20px;
 }
 .navigation {
-    display: grid;
-    gap: 33px;
-    justify-items: center;
-    padding-bottom: 24px;
+  display: grid;
+  gap: 33px;
+  justify-items: center;
+  padding-bottom: 24px;
 }
 .main {
-    display: grid;
+  display: grid;
 }
 .philosophy {
-    margin-top: 59px;
+  margin-top: 59px;
 }
-.adt_main_wraper, .philosophy, .about_us, .showcase {
-    display: grid;
-    row-gap: 32px;
-    justify-items: center;
+.adt_main_wraper,
+.philosophy,
+.about_us,
+.showcase {
+  display: grid;
+  row-gap: 32px;
+  justify-items: center;
 }
 .parent_img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-.adt_main, .adt_wraper_text, .philosophy_content, .philosophy_post, .about_us_post_wraper, .about_us_post, .about_us_text_block, .showcase_post, .contacts {
-    display: grid;
-    row-gap: 24px;
+.adt_main,
+.adt_wraper_text,
+.philosophy_content,
+.philosophy_post,
+.about_us_post_wraper,
+.about_us_post,
+.about_us_text_block,
+.showcase_post,
+.contacts {
+  display: grid;
+  row-gap: 24px;
 }
 .adt_main_wraper {
-    justify-items: stretch;
-    grid-template-areas: 
+  justify-items: stretch;
+  grid-template-areas:
     "adt_main_img"
     "adt_main";
 }
 .adt_main_img {
-    grid-area: adt_main_img;
+  grid-area: adt_main_img;
 }
 .adt_main {
-    grid-area: adt_main;
+  grid-area: adt_main;
 }
 .adt_main_title {
-    font-size: calc((100vw - 320px) / (992 - 320) * (32 - 28) + 28px);
-    font-weight: 500;
-    line-height: 150%;
+  font-size: calc((100vw - 320px) / (992 - 320) * (32 - 28) + 28px);
+  font-weight: 500;
+  line-height: 150%;
 }
 .adt_main_title_second_part {
-    font-size: calc((100vw - 320px) / (1440 - 320) * (32 - 24) + 24px);
-    line-height: 150%;
-    display: block;
-    padding-top: 5px;
+  font-size: calc((100vw - 320px) / (1440 - 320) * (32 - 24) + 24px);
+  line-height: 150%;
+  display: block;
+  padding-top: 5px;
 }
-.adt_main_form, .adt_form, .philosophy_post_text, .showcase_post_text {
-    display: grid;
-    row-gap: 16px;
+.adt_main_form,
+.adt_form,
+.philosophy_post_text,
+.showcase_post_text {
+  display: grid;
+  row-gap: 16px;
 }
 .input_mail {
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    border: 0.788462px solid #333333;
-    padding-left: 24px;
-    height: 56px;
-    width: 100%;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border: 0.788462px solid #333333;
+  padding-left: 24px;
+  height: 56px;
+  width: 100%;
 }
-.input_mail:hover, .input_mail:focus {
-    border: 1px solid #2B27F6;
-    color: #000000;
+.input_mail:hover,
+.input_mail:focus {
+  border: 1px solid #2b27f6;
+  color: #000000;
 }
 .input_mail::placeholder {
-    font-size: 18px;
-    color: #959494;
-    opacity: 0.72;
-    letter-spacing: 1.4px;
-    font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #959494;
+  opacity: 0.72;
+  letter-spacing: 1.4px;
+  font-family: "Montserrat", sans-serif;
 }
 .button {
-    border: none;
-    font: inherit;
-    background-color: #111111;
-    color: #ffffff;
-    cursor: pointer;
-    height: 56px;
-    width: 100%;
-    font-size: 18px;
-    transition: all 0.3s linear;
+  border: none;
+  font: inherit;
+  background-color: #111111;
+  color: #ffffff;
+  cursor: pointer;
+  height: 56px;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.3s linear;
 }
 .philosophy {
-    padding-bottom: 34px;
+  padding-bottom: 34px;
 }
 .adt_wraper {
-    color: #ffffff;
+  color: #ffffff;
 }
 .adt_form_mail {
-    border: solid 1px transparent;
+  border: solid 1px transparent;
 }
-.adt_2_wraper, .adt_3_wraper {
-    display: grid;
-    background-color: #7CB0C5;
+.adt_2_wraper,
+.adt_3_wraper {
+  display: grid;
+  background-color: #7cb0c5;
 }
 .adt_2_img {
-    min-height: 239px;
-    background: url(../images/adt_2/image\ 5.png) no-repeat;
-    background-position: 50% 0;
-    background-size: cover;
+  min-height: 239px;
+  background: url(../images/adt_2/image\ 5.png) no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
 }
 .adt_2_wraper_text {
-    padding-top: 45px;
+  padding-top: 45px;
 }
 .adt_wraper_text {
-    padding-top: 45px;
-    padding-bottom: 45px;
+  padding-top: 45px;
+  padding-bottom: 45px;
 }
 .adt_wraper_text_title {
-    color: #ffffff;
+  color: #ffffff;
 }
 .about_us {
-    margin-top: 64px;
+  margin-top: 64px;
 }
 .about_us_post {
-    padding-bottom: 4px;
+  padding-bottom: 4px;
 }
 .showcase {
-    margin-top: 94px;
-    padding-bottom: 60px;
+  margin-top: 94px;
+  padding-bottom: 60px;
 }
 .showcase_post_text_desktop {
-    display: none;
+  display: none;
 }
 .carousel {
-    height: 100%;
+  height: 100%;
 }
 .carousel__button {
-    display: none;
+  display: none;
 }
 .carousel__slide {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    padding-top: 0;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  padding-top: 0;
 }
 .carousel__track:first-child {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 .carousel__track:last-child {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 .carousel__slide.is-selected {
-    padding-left: 0;
-    padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
-.carousel__track, .carousel__slide {
-    min-height: 546px;
+.carousel__track,
+.carousel__slide {
+  min-height: 546px;
 }
 .carousel__dots {
-    top: calc(100% + 0.2rem);
-    left: 17px;
+  top: calc(100% + 0.2rem);
+  left: 17px;
 }
 .carousel__dots .carousel__dot:after {
-    background: #FFFFFF;
-    border: 0.5px solid #333333;
-    box-sizing: border-box;
-    width: 12px;
-    height: 12px;
+  background: #ffffff;
+  border: 0.5px solid #333333;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
 }
 .carousel__dots .carousel__dot.is-selected:after {
-    background: #333333;
+  background: #333333;
 }
 .adt_3_wraper_text {
-    padding: 45px 20px;
+  padding: 45px 20px;
 }
 .adt_3_wraper_text_desc {
-    padding-bottom: 24px;
-    padding-top: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 .adt_3_img {
-    min-height: 239px;
-    background: url(../images/adt_3/image8.png) no-repeat;
-    background-position: 50% 0%;
-    background-size: cover;
+  min-height: 239px;
+  background: url(../images/adt_3/image8.png) no-repeat;
+  background-position: 50% 0%;
+  background-size: cover;
 }
 .footer {
-    background-color: #333333;
-    color: #ffffff;
+  background-color: #333333;
+  color: #ffffff;
 }
 .footer_container {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    padding-top: 45px;
-    padding-bottom: 54px;
-    gap: 32px;   
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  padding-top: 45px;
+  padding-bottom: 54px;
+  gap: 32px;
 }
-.email_wraper, .address_wraper {
-    display: grid;
-    justify-items: center;
+.email_wraper,
+.address_wraper {
+  display: grid;
+  justify-items: center;
 }
-.email_p, .address_p {
-    font-weight: 500;
+.email_p,
+.address_p {
+  font-weight: 500;
 }
 .email_link {
-    text-decoration: none;
-    color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 .email_link:hover {
-    color: #7CB0C5;
+  color: #7cb0c5;
 }
 .address {
-    text-align: center;
+  text-align: center;
 }
 .social_menu {
-    display: grid;
-    grid-template-columns: repeat(3, 24px);
-    column-gap: 24px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 24px);
+  column-gap: 24px;
+  justify-content: center;
 }
 .link_social_menu {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url(../images/footer/Соц.сети.png);
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/footer/Соц.сети.png);
 }
 .instagram {
-    background-position: 0 0;
+  background-position: 0 0;
 }
 .twitter {
-    background-position: -48px 0;
+  background-position: -48px 0;
 }
 .facebook {
-    background-position: 24px 0;
+  background-position: 24px 0;
 }
 
 @media screen and (min-width: 576px) {
-    .adt_2_img,.adt_3_img {
-        min-height: 325px;
-    }
+  .adt_2_img,
+  .adt_3_img {
+    min-height: 325px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        width: 720px;
-        margin: 0 auto;
-    }
-    h2 {
-        justify-self: center;
-    }
-    .header {
-        height: 117px;
-    }
-   .logo_mobile_header, .burger_checkbox, .burger_button {
-       display: none;
-    }
-   .burger_menu {
-       left: 0;
-       right: 0;
-       height: 128px;
-       background-color: transparent;
-       padding-top: 0;
-       grid-template: 1fr / 1fr 2fr 1fr;
-       justify-items: stretch;
-       align-items: center;
-       position: absolute;
-    }
-    .burger_menu_link {
-        color: #333333;
-        font-size: 18px;
-    }
-    .burger_menu_link:hover {
-        color: #7CB0C5;;
-    }
-    .navigation {
-        grid-template: 1fr / 1fr 1fr 1fr;
-        padding-bottom: 0;
-        align-items: center;
-        text-align: center;
-    }
-    .menu_logo {
-        width: 72px;
-        height: 45px;
-    }
-    .social_menu {
-        justify-content: end;
-    }
-    .adt_main_wraper {
-        align-items: center;
-        grid-template-columns: 51% 49%;
-        grid-template-areas: 
-            "adt_main adt_main_img"
-    }
-    .adt_main_img {
-        height: -webkit-fill-available;
-    }
-    .adt_main_img img {
-        height: 100%;
-        object-fit: cover;
-    }
-    .adt_main {
-        padding: 36px 42px 36px 0;
-        row-gap: 32px;
-    }
-    .philosophy, .adt_2_wraper, .about_us, .showcase {
-        margin-top: 80px;
-    }
-    .philosophy {
-        padding-bottom: 0;
-    }
-    .philosophy_content {
-        gap: 40px;
-    }
-    .philosophy_post {
-        gap: 40px;
-        padding: 0;
-        align-items: center;
-    }
-    .philosophy_post_text_odd {
-        grid-area: philosophy_post_text_odd;
-    }
-    .philosophy_img_odd{
-        grid-area: philosophy_img_odd;
-    }
-    .philosophy_post_text_even {
-        grid-area: philosophy_post_text_even;
-    }
-    .philosophy_img_even {
-        grid-area: philosophy_img_even;
-    }
-    .philosophy_post_odd {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            "philosophy_post_text_odd philosophy_img_odd"
-    }
-    .philosophy_post_even {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-            "philosophy_img_even philosophy_post_text_even"
-    }
-    .adt_2_wraper {
-        position: relative;
-        grid-template-columns: 51% 49%;
-        grid-template-areas: 
-            "empty adt_2_img";
-    }
-    .adt_2_img {
-        min-height: 562px;
-        background-position: 50% 0%;
-        background-size: cover;
-        margin-top: 0;
-        grid-area: adt_2_img;
-    }
-    .empty {
-        grid-area: empty;
-    }
-    .adt_2_wraper_text {
-        position: absolute;
-        width: 40%;
-        top: 50%;
-        transform: translate(0, -50%);
-        left: 0;
-        padding: 0;
-    }
-    .adt_2_wraper_text_title, .adt_3_wraper_text_title {
-        justify-self: left;
-    }
-    .about_us {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .about_us_post_wraper {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-    .about_us_text_block_even {
-        grid-area: about_us_text_block_even;
-    }
-    .about_us_post_img_even {
-        grid-area: about_us_post_img_even;
-    }
-    .about_us_post_odd {
-        grid-template-rows: 1fr auto;
-    }
-    .about_us_post_even {
-        grid-template-rows: auto 1fr;
-        grid-template-areas: 
-        "about_us_post_img_even"
-        "about_us_text_block_even";
-    }
-    .showcase_post_text {
-        display: none;
-        grid-area: showcase_post_text;
-    }
-    .showcase_post_text_desktop {
-        grid-area: showcase_post_text_desktop;
-        display: block;
-    }
-    .carousel__slide_1 {
-        grid-area: carousel__slide_1;
-    }
-    .carousel__slide_2 {
-        grid-area: carousel__slide_2;
-    }
-    .carousel__slide_3 {
-        grid-area: carousel__slide_3;
-    }
-    .carousel__slide_4 {
-        grid-area: carousel__slide_4;
-    }
-    .carousel {
-        display: grid;
-        grid-template: auto auto auto / 1fr 1fr 1fr;
-        gap: 30px;
-        grid-template-areas: 
-        "showcase_post_text_desktop showcase_post_text_desktop carousel__slide_3"
-        "carousel__slide_1 carousel__slide_2 carousel__slide_3"
-        "carousel__slide_1 carousel__slide_2 carousel__slide_4";
-    }
-    .carousel__slide {
-        padding: 0;
-        min-height: 100%;
-    }
-    .carousel__slide img {
-        height: 100%;
-    }
-    .adt_wraper_text {
-        padding-right: 0;
-    }
-    .adt_3_wraper {
-        grid-template-columns: 49% 51%;
-        position: relative;
-    }
-    .adt_3_img {
-        min-height: 410px;
-        background: url(../images/adt_3/image8.png) no-repeat;
-        background-position: 50% 0%;
-        background-size: cover;
-    }
-    .absolute {
-        position: absolute;
-        width: 720px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .adt_3_wraper_text {
-        position: absolute;
-        top: 50%;
-        width: 44%;
-        transform: translate(0, -50%);
-        right: 0;
-        padding: 0;
-    }
-    .adt_3_wraper_text_desc {
-        padding-bottom: 24px;
-        padding-top: 24px;
-    }
-    .footer_container {
-        grid-template-columns: 1fr 3fr 1fr;
-        grid-template-areas: 
-        "footer_logo contacts social_menu_footer"
-        ". copywrite .";
-        padding-top: 64px;
-        padding-bottom: 64px;
-        row-gap: 48px;
-    }
-    .footer_logo {
-        grid-area: footer_logo;
-        justify-self: start;
-    }
-    .contacts {
-        grid-area: contacts;
-    }
-    .social_menu_footer {
-        grid-area: social_menu_footer;
-        justify-self: end;
-    }
-    .copywrite {
-        grid-area: copywrite;
-    }
+  .container {
+    width: 720px;
+    margin: 0 auto;
+  }
+  h2 {
+    justify-self: center;
+  }
+  .header {
+    height: 117px;
+  }
+  .logo_mobile_header,
+  .burger_checkbox,
+  .burger_button {
+    display: none;
+  }
+  .burger_menu {
+    left: 0;
+    right: 0;
+    height: 128px;
+    background-color: transparent;
+    padding-top: 0;
+    grid-template: 1fr / 1fr 2fr 1fr;
+    justify-items: stretch;
+    align-items: center;
+    position: absolute;
+  }
+  .burger_menu_link {
+    color: #333333;
+    font-size: 18px;
+  }
+  .burger_menu_link:hover {
+    color: #7cb0c5;
+  }
+  .navigation {
+    grid-template: 1fr / 1fr 1fr 1fr;
+    padding-bottom: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .menu_logo {
+    width: 72px;
+    height: 45px;
+  }
+  .social_menu {
+    justify-content: end;
+  }
+  .adt_main_wraper {
+    align-items: center;
+    grid-template-columns: 51% 49%;
+    grid-template-areas: "adt_main adt_main_img";
+  }
+  .adt_main_img {
+    height: -webkit-fill-available;
+  }
+  .adt_main_img img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .adt_main {
+    padding: 36px 42px 36px 0;
+    row-gap: 32px;
+  }
+  .philosophy,
+  .adt_2_wraper,
+  .about_us,
+  .showcase {
+    margin-top: 80px;
+  }
+  .philosophy {
+    padding-bottom: 0;
+  }
+  .philosophy_content {
+    gap: 40px;
+  }
+  .philosophy_post {
+    gap: 40px;
+    padding: 0;
+    align-items: center;
+  }
+  .philosophy_post_text_odd {
+    grid-area: philosophy_post_text_odd;
+  }
+  .philosophy_img_odd {
+    grid-area: philosophy_img_odd;
+  }
+  .philosophy_post_text_even {
+    grid-area: philosophy_post_text_even;
+  }
+  .philosophy_img_even {
+    grid-area: philosophy_img_even;
+  }
+  .philosophy_post_odd {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "philosophy_post_text_odd philosophy_img_odd";
+  }
+  .philosophy_post_even {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "philosophy_img_even philosophy_post_text_even";
+  }
+  .adt_2_wraper {
+    position: relative;
+    grid-template-columns: 51% 49%;
+    grid-template-areas: "empty adt_2_img";
+  }
+  .adt_2_img {
+    min-height: 562px;
+    background-position: 50% 0%;
+    background-size: cover;
+    margin-top: 0;
+    grid-area: adt_2_img;
+  }
+  .empty {
+    grid-area: empty;
+  }
+  .adt_2_wraper_text {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    padding: 0;
+  }
+  .adt_2_wraper_text_title,
+  .adt_3_wraper_text_title {
+    justify-self: left;
+  }
+  .about_us {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about_us_post_wraper {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .about_us_text_block_even {
+    grid-area: about_us_text_block_even;
+  }
+  .about_us_post_img_even {
+    grid-area: about_us_post_img_even;
+  }
+  .about_us_post_odd {
+    grid-template-rows: 1fr auto;
+  }
+  .about_us_post_even {
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "about_us_post_img_even"
+      "about_us_text_block_even";
+  }
+  .showcase_post_text {
+    display: none;
+    grid-area: showcase_post_text;
+  }
+  .showcase_post_text_desktop {
+    grid-area: showcase_post_text_desktop;
+    display: block;
+  }
+  .carousel__slide_1 {
+    grid-area: carousel__slide_1;
+  }
+  .carousel__slide_2 {
+    grid-area: carousel__slide_2;
+  }
+  .carousel__slide_3 {
+    grid-area: carousel__slide_3;
+  }
+  .carousel__slide_4 {
+    grid-area: carousel__slide_4;
+  }
+  .carousel {
+    display: grid;
+    grid-template: auto auto auto / 1fr 1fr 1fr;
+    gap: 30px;
+    grid-template-areas:
+      "showcase_post_text_desktop showcase_post_text_desktop carousel__slide_3"
+      "carousel__slide_1 carousel__slide_2 carousel__slide_3"
+      "carousel__slide_1 carousel__slide_2 carousel__slide_4";
+  }
+  .carousel__slide {
+    padding: 0;
+    min-height: 100%;
+  }
+  .carousel__slide img {
+    height: 100%;
+  }
+  .adt_wraper_text {
+    padding-right: 0;
+  }
+  .adt_3_wraper {
+    grid-template-columns: 49% 51%;
+    position: relative;
+  }
+  .adt_3_img {
+    min-height: 410px;
+    background: url(../images/adt_3/image8.png) no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+  }
+  .absolute {
+    position: absolute;
+    width: 720px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .adt_3_wraper_text {
+    position: absolute;
+    top: 50%;
+    width: 44%;
+    transform: translate(0, -50%);
+    right: 0;
+    padding: 0;
+  }
+  .adt_3_wraper_text_desc {
+    padding-bottom: 24px;
+    padding-top: 24px;
+  }
+  .footer_container {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+      "footer_logo contacts social_menu_footer"
+      ". copywrite .";
+    padding-top: 64px;
+    padding-bottom: 64px;
+    row-gap: 48px;
+  }
+  .footer_logo {
+    grid-area: footer_logo;
+    justify-self: start;
+  }
+  .contacts {
+    grid-area: contacts;
+  }
+  .social_menu_footer {
+    grid-area: social_menu_footer;
+    justify-self: end;
+  }
+  .copywrite {
+    grid-area: copywrite;
+  }
 }
 @media screen and (min-width: 992px) {
-    .container {
-        width: 960px;
-    }
-    .adt_main_form, .adt_2_form {
-        gap: 0;
-        grid-template: 1fr / 301px 170px;
-    }
-    .absolute {
-        width: 960px;
-    }
-    .adt_2_img {
-        min-height: 562px;
-    }
-    .adt_2_wraper_text {
-        width: 40%;
-    }
-    .adt_3_img {
-        min-height: 600px;
-    }
-    .adt_3_wraper_text_desc {
-        padding-bottom: 32px;
-        padding-top: 32px;
-    }
-    .footer_container {
-        row-gap: 64px;
-    }
+  .container {
+    width: 960px;
+  }
+  .adt_main_form,
+  .adt_2_form {
+    gap: 0;
+    grid-template: 1fr / 301px 170px;
+  }
+  .absolute {
+    width: 960px;
+  }
+  .adt_2_img {
+    min-height: 562px;
+  }
+  .adt_2_wraper_text {
+    width: 40%;
+  }
+  .adt_3_img {
+    min-height: 600px;
+  }
+  .adt_3_wraper_text_desc {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+  .footer_container {
+    row-gap: 64px;
+  }
 }
 @media screen and (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-    .adt_main {
-        padding: 95px 130px 95px 0;
-        row-gap: 32px;
-    }
-    .adt_main_title {
-        font-size: 46px;
-    }
-    .adt_2_form {
-        gap: 0;
-        grid-template: 1fr / 301px 170px;
-    }
-    .adt_main_text, .adt_2_wraper_text_desc {
-        font-size: 20px;
-    }
-    .adt_2_form {
-        gap: 0;
-        grid-template: 1fr / 301px 170px;
-    }
-    .philosophy, .adt_2_wraper, .about_us, .showcase {
-        margin-top: 200px;
-    }
-    .parent_img {
-        height: 100%;
-        overflow: hidden;
-    }
-    .parent_img img {
-        height: 100%;
-        object-fit: cover;
-    }
-    .philosophy  {
-        gap: 80px;
-    }
-    .philosophy_content {
-        gap: 80px;
-    }
-    .philosophy_content_img {
-        height: 614px;
-    }
-    .philosophy_post {
-        align-items: start;
-        gap: 80px;
-    }
-    .philosophy_post_text {
-        gap: 48px;
-    }
-    .adt_wraper {
-        background-color: #7CB0C5;
-    }
-    .adt_2_wraper_text {
-        width: 40%;
-    }
-    .about_us, .about_us_post_wraper {
-        gap: 80px;
-    }
-    .about_us_post_odd {
-        grid-template-rows: 1fr 400px;
-    }
-    .about_us_post_even {
-        grid-template-rows: 400px 1fr;
-    }
-    .about_us_post, .about_us_text_block {
-        gap: 48px;
-    }
-    .showcase {
-        gap: 80px;
-    }
-    .showcase_post {
-        gap: 0;
-    }
-    .showcase_post_text_desktop {
-        display: grid;
-    }
-    .carousel {
-        grid-template-rows: 267px 200px 497px;
-        gap: 30px;
-    }
-    .adt_3_wraper {
-        margin-top: 140px;
-    }
-    .adt_3_wraper_text {
-        padding: 210px 0 210px 130px;
-        align-content: center;
-    }
-    .adt_3_img {
-        min-height: 690px;
-    }
-    .absolute {
-        width: 1170px;
-    }
-    .adt_3_wraper_text {
-        width: 40%;
-    }
-    .footer_container {
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
+  .container {
+    width: 1170px;
+  }
+  .adt_main {
+    padding: 95px 130px 95px 0;
+    row-gap: 32px;
+  }
+  .adt_main_title {
+    font-size: 46px;
+  }
+  .adt_2_form {
+    gap: 0;
+    grid-template: 1fr / 301px 170px;
+  }
+  .adt_main_text,
+  .adt_2_wraper_text_desc {
+    font-size: 20px;
+  }
+  .adt_2_form {
+    gap: 0;
+    grid-template: 1fr / 301px 170px;
+  }
+  .philosophy,
+  .adt_2_wraper,
+  .about_us,
+  .showcase {
+    margin-top: 200px;
+  }
+  .parent_img {
+    height: 100%;
+    overflow: hidden;
+  }
+  .parent_img img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .philosophy {
+    gap: 80px;
+  }
+  .philosophy_content {
+    gap: 80px;
+  }
+  .philosophy_content_img {
+    height: 614px;
+  }
+  .philosophy_post {
+    align-items: start;
+    gap: 80px;
+  }
+  .philosophy_post_text {
+    gap: 48px;
+  }
+  .adt_wraper {
+    background-color: #7cb0c5;
+  }
+  .adt_2_wraper_text {
+    width: 40%;
+  }
+  .about_us,
+  .about_us_post_wraper {
+    gap: 80px;
+  }
+  .about_us_post_odd {
+    grid-template-rows: 1fr 400px;
+  }
+  .about_us_post_even {
+    grid-template-rows: 400px 1fr;
+  }
+  .about_us_post,
+  .about_us_text_block {
+    gap: 48px;
+  }
+  .showcase {
+    gap: 80px;
+  }
+  .showcase_post {
+    gap: 0;
+  }
+  .showcase_post_text_desktop {
+    display: grid;
+  }
+  .carousel {
+    grid-template-rows: 267px 200px 497px;
+    gap: 30px;
+  }
+  .adt_3_wraper {
+    margin-top: 140px;
+  }
+  .adt_3_wraper_text {
+    padding: 210px 0 210px 130px;
+    align-content: center;
+  }
+  .adt_3_img {
+    min-height: 690px;
+  }
+  .absolute {
+    width: 1170px;
+  }
+  .adt_3_wraper_text {
+    width: 40%;
+  }
+  .footer_container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
-
-
 
 /* pop-up */
 .modal_button {
-    text-align: center;
-    display: block;
-    border: none;
-    font: inherit;
-    background-color: #111111;
-    color: #ffffff;
-    cursor: pointer;
-    height: auto;
-    width: 100%;
-    font-size: 18px;
-    transition: all 0.3s linear;
+  text-align: center;
+  display: block;
+  border: none;
+  font: inherit;
+  background-color: #111111;
+  color: #ffffff;
+  cursor: pointer;
+  height: auto;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.3s linear;
 }
 .modal_checkbox {
-    display: none;
+  display: none;
 }
 .fixed {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(17, 17, 17, 0.9);
-    z-index: 998;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(17, 17, 17, 0.9);
+  z-index: 998;
 }
 .fixed_none {
-    display: none;
+  display: none;
 }
 .window {
-    position: absolute;
-    width: 442px;
-    height: 400px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 15;
-    background: url(../images/pop-up/image2.png);
-    background-size: cover;
-    z-index: 999;
-    display: grid;
-    justify-content: end;
-    align-content: start;
+  position: absolute;
+  width: 442px;
+  height: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  background: url(../images/pop-up/image2.png);
+  background-size: cover;
+  z-index: 999;
+  display: grid;
+  justify-content: end;
+  align-content: start;
 }
 .window_text {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #7CB0C5;
-    color: #ffffff;
-    text-align: center;
-    font-weight: 500;
-    padding: 44px 52px 47px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #7cb0c5;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  padding: 44px 52px 47px;
 }
 .first_line_window {
-    padding-bottom: 21px;
+  padding-bottom: 21px;
 }
 .close {
-    background: url(../images/pop-up/Vector\ 5.png);
-    width: 15px;
-    height: 15px;
-    border: none;
-    cursor: pointer;
-    margin-top: 18px;
-    margin-right: 22px;
+  background: url(../images/pop-up/Vector\ 5.png);
+  width: 15px;
+  height: 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 18px;
+  margin-right: 22px;
 }
