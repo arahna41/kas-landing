@@ -6,6 +6,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
   font-size: 16px;
+  color: #333333;
 }
 .adt_main,
 .philosophy_title,
@@ -17,17 +18,15 @@ body {
   padding: 0 20px;
 }
 h2 {
-  color: #333333;
-  font-size: calc((100vw - 320px) / (1440 - 320) * (40 - 24) + 24px);
+  font-size: 24px;
   font-weight: 500;
   justify-self: start;
-  line-height: 124%;
+  line-height: 36px;
 }
 h3 {
-  font-size: calc((100vw - 320px) / (1440 - 320) * (32 - 20) + 20px);
-  color: #333333;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 30px;
 }
 img {
   display: block;
@@ -49,7 +48,7 @@ img {
 }
 .logo_mobile_header {
   display: block;
-  width: 54px;
+  width: 70px;
   height: auto;
 }
 .burger_menu_wraper {
@@ -117,8 +116,9 @@ input[type="checkbox"]:checked + label:after {
   display: grid;
   gap: 24px;
   justify-items: center;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 }
+
 .main {
   display: grid;
 }
@@ -375,6 +375,12 @@ input[type="checkbox"]:checked + label:after {
   }
   h2 {
     justify-self: center;
+    font-size: 24px;
+    line-height: 121%;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 48px;
   }
   .header {
     height: 128px;
@@ -398,6 +404,7 @@ input[type="checkbox"]:checked + label:after {
   .burger_menu_link {
     color: #333333;
     font-size: 18px;
+    line-height: 150%;
   }
   .burger_menu_link:hover {
     color: #7cb0c5;
@@ -408,10 +415,7 @@ input[type="checkbox"]:checked + label:after {
     padding-bottom: 0;
     align-items: center;
     text-align: center;
-  }
-  .menu_logo {
-    width: 72px;
-    height: 45px;
+    gap: 48px;
   }
   .social_menu {
     justify-content: end;
