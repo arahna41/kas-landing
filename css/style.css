@@ -8,10 +8,10 @@ body {
   font-size: 14px;
   color: #333333;
 }
-.bunner_main,
+
+.banner_text_block,
 .philosophy_title,
 .philosophy_post,
-.bunner_text_block,
 .adt_wraper_text,
 .about_us,
 .showcase_title,
@@ -125,7 +125,7 @@ input[type="checkbox"]:checked + label:after {
 .philosophy {
   margin-top: 59px;
 }
-.bunner_wraper,
+.banner_wraper,
 .philosophy,
 .about_us,
 .showcase {
@@ -137,7 +137,7 @@ input[type="checkbox"]:checked + label:after {
   width: 100%;
   height: auto;
 }
-.bunner_text_block,
+.banner_text_block,
 .adt_wraper_text,
 .philosophy_content,
 .philosophy_post,
@@ -149,30 +149,30 @@ input[type="checkbox"]:checked + label:after {
   display: grid;
   row-gap: 24px;
 }
-.bunner_wraper {
+.banner_wraper {
   justify-items: stretch;
   grid-template-areas:
-    "bunner_img"
-    "bunner_text_block";
+    "banner_img"
+    "banner_text_block";
 }
-.bunner_img {
-  grid-area: bunner_img;
+.banner_img {
+  grid-area: banner_img;
 }
-.bunner_text_block {
-  grid-area: bunner_text_block;
+.banner_text_block {
+  grid-area: banner_text_block;
 }
-.bunner_title {
+.banner_title {
   font-size: 28px;
   font-weight: 500;
   line-height: 42px;
 }
-.bunner_title_second_part {
+.banner_title_second_part {
   font-size: 24px;
   line-height: 36px;
   display: block;
   padding-top: 4px;
 }
-.bunner_contact_form,
+.banner_contact_form,
 .adt_form,
 .philosophy_post_text,
 .showcase_post_text {
@@ -374,10 +374,17 @@ input[type="checkbox"]:checked + label:after {
     font-size: 20px;
     line-height: 30px;
   }
-  .container {
+ /*  .container {
     width: 720px;
     margin: 0 auto;
+  } */
+  .container {
+    justify-self: center;
+    max-width: 1170px;
+    width: calc(100% - 64px);
+    margin: 0 32px;
   }
+  
   h2 {
     justify-self: center;
     font-size: 24px;
@@ -396,7 +403,8 @@ input[type="checkbox"]:checked + label:after {
     display: none;
   }
   .burger_menu {
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
     right: 0;
     height: 128px;
     background-color: transparent;
@@ -406,6 +414,8 @@ input[type="checkbox"]:checked + label:after {
     justify-items: stretch;
     align-items: center;
     position: absolute;
+    max-width: 1170px;
+    width: calc(100% - 64px);
   }
   .burger_menu_link {
     color: #333333;
@@ -426,27 +436,27 @@ input[type="checkbox"]:checked + label:after {
   .social_menu {
     justify-content: end;
   }
-  .bunner_title {
+  .banner_title {
     font-size: 46px;
     line-height: 69px;
   }
-  .bunner_title_second_part {
+  .banner_title_second_part {
     font-size: 32px;
     line-height: 38.4px;
   }
-  .bunner_wraper {
+  .banner_wraper {
     align-items: center;
     grid-template-columns: 51% 49%;
-    grid-template-areas: "bunner_text_block bunner_img";
+    grid-template-areas: "banner_text_block banner_img";
   }
-  .bunner_img {
+  .banner_img {
     height: -webkit-fill-available;
   }
-  .bunner_img img {
+  .banner_img img {
     height: 100%;
     object-fit: cover;
   }
-  .bunner_text_block {
+  .banner_text_block {
     padding: 36px 42px 36px 0;
     row-gap: 32px;
   }
@@ -630,10 +640,10 @@ input[type="checkbox"]:checked + label:after {
   }
 }
 @media screen and (min-width: 992px) {
-  .container {
+ /*  .container {
     width: 960px;
-  }
-  .bunner_contact_form,
+  } */
+  .banner_contact_form,
   .adt_2_form {
     gap: 0;
     grid-template: 1fr / 1fr auto;
@@ -659,21 +669,21 @@ input[type="checkbox"]:checked + label:after {
   }
 }
 @media screen and (min-width: 1200px) {
-  .container {
+/*   .container {
     width: 1170px;
-  }
-  .bunner_text_block {
+  } */
+  .banner_text_block {
     padding: 95px 130px 95px 0;
     row-gap: 32px;
   }
-  .bunner_title {
+  .banner_title {
     font-size: 46px;
   }
   .adt_2_form {
     gap: 0;
     grid-template: 1fr / 301px 170px;
   }
-  .bunner_text,
+  .banner_text,
   .adt_2_wraper_text_desc {
     font-size: 20px;
   }
