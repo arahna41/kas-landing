@@ -1,0 +1,52 @@
+.text_10 {
+  font-size: 0.625rem;
+  line-height: 1rem;
+}
+.text_12 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.text_14 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.text_16 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.text_18 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.text_20 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.text_24 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.text_32 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.text_40 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.text_48 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+.text_56 {
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+.text_64 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+}
+.text_72 {
+  font-size: 4.5rem;
+  line-height: 4.75rem;
+}
