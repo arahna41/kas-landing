@@ -255,11 +255,13 @@ input[type="checkbox"]:checked + label:after {
   display: none;
 }
 .carousel__slide {
-  width: 100%;
+  width: auto;
   display: grid;
   justify-items: center;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 16px;
+}
+.carousel__slide img {
+  height: 100%;
 }
 .carousel__track:first-child {
   padding-left: 20px;
@@ -268,8 +270,7 @@ input[type="checkbox"]:checked + label:after {
   padding-right: 20px;
 }
 .carousel__slide.is-selected {
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0;
 }
 .carousel__track,
 .carousel__slide {
@@ -562,9 +563,11 @@ input[type="checkbox"]:checked + label:after {
   .carousel__slide {
     padding: 0;
     min-height: 100%;
+    overflow: hidden;
   }
   .carousel__slide img {
     height: 100%;
+    min-width: 100%;
   }
   .contact_form_wraper_text {
     padding-right: 0;
