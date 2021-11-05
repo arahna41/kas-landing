@@ -5,7 +5,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
-  font-size: 14px;
+  font-size: 16px;
   color: #333333;
 }
 
@@ -110,8 +110,6 @@ input[type="checkbox"]:checked + label:after {
   color: #ffffff;
   font-weight: 500;
   transition: all 0.3s linear;
-  font-size: 20px;
-  line-height: 30px;
 }
 .navigation {
   display: grid;
@@ -162,13 +160,9 @@ input[type="checkbox"]:checked + label:after {
   grid-area: banner_text_block;
 }
 .banner_title {
-  font-size: 28px;
   font-weight: 500;
-  line-height: 42px;
 }
 .banner_title_second_part {
-  font-size: 24px;
-  line-height: 36px;
   display: block;
   padding-top: 4px;
 }
@@ -204,12 +198,10 @@ input[type="checkbox"]:checked + label:after {
 .button {
   padding: 15.5px 23px;
   border: none;
-  font: inherit;
+  font-family: inherit;
   background-color: #111111;
   color: #ffffff;
   cursor: pointer;
-  font-size: 18px;
-  line-height: 27px;
   transition: all 0.3s linear;
 }
 .philosophy {
@@ -374,7 +366,7 @@ input[type="checkbox"]:checked + label:after {
     font-size: 20px;
     line-height: 30px;
   }
- /*  .container {
+  /*  .container {
     width: 720px;
     margin: 0 auto;
   } */
@@ -384,7 +376,7 @@ input[type="checkbox"]:checked + label:after {
     width: calc(100% - 64px);
     margin: 0 32px;
   }
-  
+
   h2 {
     justify-self: center;
     font-size: 24px;
@@ -419,8 +411,6 @@ input[type="checkbox"]:checked + label:after {
   }
   .burger_menu_link {
     color: #333333;
-    font-size: 18px;
-    line-height: 150%;
   }
   .burger_menu_link:hover {
     color: #7cb0c5;
@@ -437,12 +427,12 @@ input[type="checkbox"]:checked + label:after {
     justify-content: end;
   }
   .banner_title {
-    font-size: 46px;
-    line-height: 69px;
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
   .banner_title_second_part {
-    font-size: 32px;
-    line-height: 38.4px;
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
   .banner_wraper {
     align-items: center;
@@ -640,7 +630,7 @@ input[type="checkbox"]:checked + label:after {
   }
 }
 @media screen and (min-width: 992px) {
- /*  .container {
+  /*  .container {
     width: 960px;
   } */
   .banner_contact_form,
@@ -669,15 +659,12 @@ input[type="checkbox"]:checked + label:after {
   }
 }
 @media screen and (min-width: 1200px) {
-/*   .container {
+  /*   .container {
     width: 1170px;
   } */
   .banner_text_block {
     padding: 95px 130px 95px 0;
     row-gap: 32px;
-  }
-  .banner_title {
-    font-size: 46px;
   }
   .adt_2_form {
     gap: 0;
