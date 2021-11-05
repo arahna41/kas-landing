@@ -672,7 +672,7 @@ input[type="checkbox"]:checked + label:after {
   .contact_form_middle_wraper,
   .about_us,
   .showcase {
-    margin-top: 200px;
+    margin-top: 160px;
   }
   .parent_img {
     height: 100%;
