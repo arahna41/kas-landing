@@ -5,12 +5,13 @@
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
 }
-.adt_main,
+.bunner_main,
 .philosophy_title,
 .philosophy_post,
+.bunner_text_block,
 .adt_wraper_text,
 .about_us,
 .showcase_title,
@@ -118,14 +119,13 @@ input[type="checkbox"]:checked + label:after {
   justify-items: center;
   padding-bottom: 25px;
 }
-
 .main {
   display: grid;
 }
 .philosophy {
   margin-top: 59px;
 }
-.adt_main_wraper,
+.bunner_wraper,
 .philosophy,
 .about_us,
 .showcase {
@@ -137,7 +137,7 @@ input[type="checkbox"]:checked + label:after {
   width: 100%;
   height: auto;
 }
-.adt_main,
+.bunner_text_block,
 .adt_wraper_text,
 .philosophy_content,
 .philosophy_post,
@@ -149,30 +149,30 @@ input[type="checkbox"]:checked + label:after {
   display: grid;
   row-gap: 24px;
 }
-.adt_main_wraper {
+.bunner_wraper {
   justify-items: stretch;
   grid-template-areas:
-    "adt_main_img"
-    "adt_main";
+    "bunner_img"
+    "bunner_text_block";
 }
-.adt_main_img {
-  grid-area: adt_main_img;
+.bunner_img {
+  grid-area: bunner_img;
 }
-.adt_main {
-  grid-area: adt_main;
+.bunner_text_block {
+  grid-area: bunner_text_block;
 }
-.adt_main_title {
-  font-size: calc((100vw - 320px) / (992 - 320) * (32 - 28) + 28px);
+.bunner_title {
+  font-size: 28px;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 42px;
 }
-.adt_main_title_second_part {
-  font-size: calc((100vw - 320px) / (1440 - 320) * (32 - 24) + 24px);
-  line-height: 150%;
+.bunner_title_second_part {
+  font-size: 24px;
+  line-height: 36px;
   display: block;
-  padding-top: 5px;
+  padding-top: 4px;
 }
-.adt_main_form,
+.bunner_contact_form,
 .adt_form,
 .philosophy_post_text,
 .showcase_post_text {
@@ -185,7 +185,7 @@ input[type="checkbox"]:checked + label:after {
   box-sizing: border-box;
   border: 0.788462px solid #333333;
   padding-left: 24px;
-  height: 56px;
+  padding: 14px 24px 18px;
   width: 100%;
 }
 .input_mail:hover,
@@ -195,20 +195,21 @@ input[type="checkbox"]:checked + label:after {
 }
 .input_mail::placeholder {
   font-size: 18px;
+  line-height: 27px;
   color: #959494;
   opacity: 0.72;
   letter-spacing: 1.4px;
   font-family: "Montserrat", sans-serif;
 }
 .button {
+  padding: 15.5px 23px;
   border: none;
   font: inherit;
   background-color: #111111;
   color: #ffffff;
   cursor: pointer;
-  height: 56px;
-  width: 100%;
   font-size: 18px;
+  line-height: 27px;
   transition: all 0.3s linear;
 }
 .philosophy {
@@ -369,6 +370,10 @@ input[type="checkbox"]:checked + label:after {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    font-size: 20px;
+    line-height: 30px;
+  }
   .container {
     width: 720px;
     margin: 0 auto;
@@ -396,7 +401,8 @@ input[type="checkbox"]:checked + label:after {
     height: 128px;
     background-color: transparent;
     padding-top: 0;
-    grid-template: 1fr / 1fr 4fr 1fr;
+    grid-auto-flow: column;
+    align-content: center;
     justify-items: stretch;
     align-items: center;
     position: absolute;
@@ -420,19 +426,27 @@ input[type="checkbox"]:checked + label:after {
   .social_menu {
     justify-content: end;
   }
-  .adt_main_wraper {
+  .bunner_title {
+    font-size: 46px;
+    line-height: 69px;
+  }
+  .bunner_title_second_part {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .bunner_wraper {
     align-items: center;
     grid-template-columns: 51% 49%;
-    grid-template-areas: "adt_main adt_main_img";
+    grid-template-areas: "bunner_text_block bunner_img";
   }
-  .adt_main_img {
+  .bunner_img {
     height: -webkit-fill-available;
   }
-  .adt_main_img img {
+  .bunner_img img {
     height: 100%;
     object-fit: cover;
   }
-  .adt_main {
+  .bunner_text_block {
     padding: 36px 42px 36px 0;
     row-gap: 32px;
   }
@@ -619,13 +633,10 @@ input[type="checkbox"]:checked + label:after {
   .container {
     width: 960px;
   }
-  .burger_menu {
-    grid-template: 1fr / 1fr 2fr 1fr;
-  }
-  .adt_main_form,
+  .bunner_contact_form,
   .adt_2_form {
     gap: 0;
-    grid-template: 1fr / 301px 170px;
+    grid-template: 1fr / 1fr auto;
   }
   .absolute {
     width: 960px;
@@ -651,18 +662,18 @@ input[type="checkbox"]:checked + label:after {
   .container {
     width: 1170px;
   }
-  .adt_main {
+  .bunner_text_block {
     padding: 95px 130px 95px 0;
     row-gap: 32px;
   }
-  .adt_main_title {
+  .bunner_title {
     font-size: 46px;
   }
   .adt_2_form {
     gap: 0;
     grid-template: 1fr / 301px 170px;
   }
-  .adt_main_text,
+  .bunner_text,
   .adt_2_wraper_text_desc {
     font-size: 20px;
   }
