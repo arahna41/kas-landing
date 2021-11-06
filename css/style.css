@@ -219,7 +219,7 @@ input[type="checkbox"]:checked + label:after {
 }
 .contact_form_middle_img {
   min-height: 239px;
-  background: url(../images/contact_form_middle/contact_form_middle.png)
+  background: url(../images/contact_form_middle/contact_form_middle.jpg)
     no-repeat;
   background-position: 50% 0;
   background-size: cover;
@@ -294,7 +294,7 @@ input[type="checkbox"]:checked + label:after {
 }
 .contact_form_bottom_img {
   min-height: 239px;
-  background: url(../images/contact_form_bottom/contact_form_bottom.png)
+  background: url(../images/contact_form_bottom/contact_form_bottom.jpg)
     no-repeat;
   background-position: 50% 0%;
   background-size: cover;
@@ -728,7 +728,6 @@ input[type="checkbox"]:checked + label:after {
     display: grid;
   }
   .carousel {
-    /* grid-template-rows: 267px 200px 497px; */
     gap: 30px;
   }
   .contact_form_bottom_wraper {

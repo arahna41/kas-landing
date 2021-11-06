@@ -41,7 +41,7 @@ for (var i = 0; i < linkNav.length; i++) {
   );
 }
 
-var link = document.querySelector(".burger_menu_link");
+const link = document.querySelector(".burger_menu_link");
 const close = document.getElementById("checkbox");
 
 link.addEventListener("click", linkClick);
