@@ -2,9 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 /* general style */
+html, * {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
-  line-height: 150%;
   font-size: 16px;
   color: #333333;
 }
@@ -33,6 +36,17 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+.button {
+  padding: 12px 24px;
+  border: none;
+  outline: none;
+  appearance: none;
+  font-family: inherit;
+  background-color: #111111;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
 }
 .button:hover {
   background-color: #02a7ea;
@@ -91,7 +105,7 @@ input[type="checkbox"]:checked + label:after {
   bottom: 0;
   right: -100%;
   left: 100%;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   z-index: 5;
   display: grid;
   align-content: start;
@@ -107,8 +121,7 @@ input[type="checkbox"]:checked + label:after {
   display: block;
   text-decoration: none;
   color: #ffffff;
-  font-weight: 500;
-  transition: all 0.3s linear;
+  transition: color 0.2s linear;
 }
 .navigation {
   display: grid;
@@ -175,11 +188,9 @@ input[type="checkbox"]:checked + label:after {
 .input_mail {
   outline: none;
   border: none;
-  box-sizing: border-box;
-  border: 0.788462px solid #333333;
-  padding-left: 24px;
-  padding: 14px 24px 18px;
-  width: 100%;
+  font-family: inherit;
+  border: 1px solid #333333;
+  padding: 11px 24px;
 }
 .input_mail:hover,
 .input_mail:focus {
@@ -187,21 +198,10 @@ input[type="checkbox"]:checked + label:after {
   color: #000000;
 }
 .input_mail::placeholder {
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #959494;
   opacity: 0.72;
-  letter-spacing: 1.4px;
-  font-family: "Montserrat", sans-serif;
-}
-.button {
-  padding: 15.5px 23px;
-  border: none;
-  font-family: inherit;
-  background-color: #111111;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.3s linear;
 }
 .philosophy {
   padding-bottom: 34px;
@@ -287,7 +287,6 @@ input[type="checkbox"]:checked + label:after {
 .carousel__dots .carousel__dot:after {
   background: #ffffff;
   border: 0.5px solid #333333;
-  box-sizing: border-box;
   width: 12px;
   height: 12px;
 }
@@ -314,7 +313,7 @@ input[type="checkbox"]:checked + label:after {
   justify-items: center;
   padding-top: 45px;
   padding-bottom: 54px;
-  gap: 32px;
+  gap: 24px;
 }
 .email_wraper,
 .address_wraper {
@@ -610,7 +609,7 @@ input[type="checkbox"]:checked + label:after {
       ". copywrite .";
     padding-top: 64px;
     padding-bottom: 64px;
-    row-gap: 48px;
+    row-gap: 24px;
   }
   .logo {
     grid-area: logo;
@@ -654,7 +653,7 @@ input[type="checkbox"]:checked + label:after {
     min-height: 600px;
   }
   .footer_container {
-    row-gap: 64px;
+    row-gap: 24px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -669,8 +668,7 @@ input[type="checkbox"]:checked + label:after {
     gap: 0;
     grid-template: 1fr / 301px 170px;
   }
-  .banner_text,
-  .contact_form_middle_wraper_text_desc {
+  .banner_text {
     font-size: 20px;
   }
   .philosophy,
@@ -731,6 +729,7 @@ input[type="checkbox"]:checked + label:after {
   }
   .showcase_post_text_desktop {
     display: grid;
+    gap: 48px;
   }
   .carousel {
     gap: 30px;
@@ -775,7 +774,7 @@ input[type="checkbox"]:checked + label:after {
   height: auto;
   width: 100%;
   font-size: 18px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 .modal_checkbox {
   display: none;
@@ -817,7 +816,6 @@ input[type="checkbox"]:checked + label:after {
   background-color: #7cb0c5;
   color: #ffffff;
   text-align: center;
-  font-weight: 500;
   padding: 44px 52px 47px;
 }
 .first_line_window {
