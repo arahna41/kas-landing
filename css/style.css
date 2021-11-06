@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 /* general style */
-html, * {
+html,
+* {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -23,6 +25,7 @@ body {
 }
 h2 {
   font-weight: 500;
+  -ms-grid-column-align: start;
   justify-self: start;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -41,11 +44,16 @@ img {
   padding: 12px 24px;
   border: none;
   outline: none;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   font-family: inherit;
   background-color: #111111;
   color: #ffffff;
   cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 .button:hover {
@@ -55,10 +63,14 @@ img {
   background-color: #046e9a;
 }
 .header {
+  display: -ms-grid;
   display: grid;
   height: 56px;
   padding: 0 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 .logo_mobile_header {
@@ -67,6 +79,7 @@ img {
   height: auto;
 }
 .burger_menu_wraper {
+  -ms-grid-column-align: end;
   justify-self: end;
 }
 .burger_checkbox {
@@ -105,15 +118,20 @@ input[type="checkbox"]:checked + label:after {
   bottom: 0;
   right: -100%;
   left: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   z-index: 5;
+  display: -ms-grid;
   display: grid;
+  -ms-flex-line-pack: start;
   align-content: start;
   justify-items: center;
   gap: 40px;
   padding-top: 108px;
 }
-.logo, .mobile_logo {
+.logo,
+.mobile_logo {
   width: 70px;
   height: 44px;
 }
@@ -121,15 +139,19 @@ input[type="checkbox"]:checked + label:after {
   display: block;
   text-decoration: none;
   color: #ffffff;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
 .navigation {
+  display: -ms-grid;
   display: grid;
   gap: 24px;
   justify-items: center;
   padding-bottom: 25px;
 }
 .main {
+  display: -ms-grid;
   display: grid;
 }
 .philosophy {
@@ -139,9 +161,12 @@ input[type="checkbox"]:checked + label:after {
 .philosophy,
 .about_us,
 .showcase {
+  display: -ms-grid;
   display: grid;
   row-gap: 32px;
   justify-items: center;
+  -ms-grid-row-align: start;
+      align-self: start;
 }
 .parent_img {
   width: 100%;
@@ -156,19 +181,24 @@ input[type="checkbox"]:checked + label:after {
 .about_us_text_block,
 .showcase_post,
 .contacts {
+  display: -ms-grid;
   display: grid;
   row-gap: 24px;
 }
 .banner_wraper {
   justify-items: stretch;
-  grid-template-areas:
+      grid-template-areas:
     "banner_img"
     "banner_text_block";
 }
 .banner_img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: banner_img;
 }
 .banner_text_block {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: banner_text_block;
 }
 .banner_title {
@@ -182,12 +212,14 @@ input[type="checkbox"]:checked + label:after {
 .contact_form,
 .philosophy_post_text,
 .showcase_post_text {
+  display: -ms-grid;
   display: grid;
   row-gap: 16px;
 }
 .input_mail {
   outline: none;
   border: none;
+  margin: 0;
   font-family: inherit;
   border: 1px solid #333333;
   padding: 11px 24px;
@@ -196,6 +228,30 @@ input[type="checkbox"]:checked + label:after {
 .input_mail:focus {
   border: 1px solid #2b27f6;
   color: #000000;
+}
+.input_mail::-webkit-input-placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #959494;
+  opacity: 0.72;
+}
+.input_mail::-moz-placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #959494;
+  opacity: 0.72;
+}
+.input_mail:-ms-input-placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #959494;
+  opacity: 0.72;
+}
+.input_mail::-ms-input-placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #959494;
+  opacity: 0.72;
 }
 .input_mail::placeholder {
   font-size: 1rem;
@@ -214,6 +270,7 @@ input[type="checkbox"]:checked + label:after {
 }
 .contact_form_middle_wraper,
 .contact_form_bottom_wraper {
+  display: -ms-grid;
   display: grid;
   background-color: #7cb0c5;
 }
@@ -248,7 +305,6 @@ input[type="checkbox"]:checked + label:after {
   display: none;
 }
 
-
 .carousel {
   height: 100%;
   margin-bottom: 8px;
@@ -258,6 +314,7 @@ input[type="checkbox"]:checked + label:after {
 }
 .carousel__slide {
   width: auto;
+  display: -ms-grid;
   display: grid;
   justify-items: center;
   padding: 0 16px;
@@ -279,7 +336,6 @@ input[type="checkbox"]:checked + label:after {
 .carousel__slide {
   min-height: 546px;
 }
-
 
 .carousel__dots {
   top: calc(100% + 0.2rem);
@@ -308,7 +364,10 @@ input[type="checkbox"]:checked + label:after {
   color: #ffffff;
 }
 .footer_container {
+  display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   justify-items: center;
   padding-top: 45px;
@@ -317,6 +376,7 @@ input[type="checkbox"]:checked + label:after {
 }
 .email_wraper,
 .address_wraper {
+  display: -ms-grid;
   display: grid;
   justify-items: center;
 }
@@ -335,9 +395,15 @@ input[type="checkbox"]:checked + label:after {
   text-align: center;
 }
 .social_menu {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 24px 24px 24px 24px 24px;
   grid-template-columns: repeat(3, 24px);
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
   column-gap: 24px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .instagram {
@@ -369,6 +435,7 @@ input[type="checkbox"]:checked + label:after {
     line-height: 1.75rem;
   }
   .container {
+    -ms-grid-column-align: center;
     justify-self: center;
     max-width: 1170px;
     width: calc(100% - 64px);
@@ -376,6 +443,7 @@ input[type="checkbox"]:checked + label:after {
   }
 
   h2 {
+    -ms-grid-column-align: center;
     justify-self: center;
     font-size: 2.5rem;
     line-height: 3rem;
@@ -394,14 +462,19 @@ input[type="checkbox"]:checked + label:after {
   }
   .burger_menu {
     left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     right: 0;
     height: 128px;
     background-color: transparent;
     padding-top: 0;
     grid-auto-flow: column;
+    -ms-flex-line-pack: center;
     align-content: center;
     justify-items: stretch;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: absolute;
     max-width: 1170px;
@@ -415,13 +488,19 @@ input[type="checkbox"]:checked + label:after {
   }
   .navigation {
     grid-auto-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-bottom: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
     gap: 48px;
   }
   .social_menu {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
   }
   .banner_title {
@@ -433,15 +512,16 @@ input[type="checkbox"]:checked + label:after {
     line-height: 2rem;
   }
   .banner_wraper {
-    align-items: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -ms-grid-columns: 51% 49%;
     grid-template-columns: 51% 49%;
-    grid-template-areas: "banner_text_block banner_img";
-  }
-  .banner_img {
-    height: -webkit-fill-available;
+        grid-template-areas: "banner_text_block banner_img";
   }
   .banner_img img {
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   .banner_text_block {
@@ -463,6 +543,8 @@ input[type="checkbox"]:checked + label:after {
   .philosophy_post {
     gap: 40px;
     padding: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .philosophy_post_text_odd {
@@ -478,17 +560,20 @@ input[type="checkbox"]:checked + label:after {
     grid-area: philosophy_img_even;
   }
   .philosophy_post_odd {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "philosophy_post_text_odd philosophy_img_odd";
+        grid-template-areas: "philosophy_post_text_odd philosophy_img_odd";
   }
   .philosophy_post_even {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "philosophy_img_even philosophy_post_text_even";
+        grid-template-areas: "philosophy_img_even philosophy_post_text_even";
   }
   .contact_form_middle_wraper {
     position: relative;
+    -ms-grid-columns: 51% 49%;
     grid-template-columns: 51% 49%;
-    grid-template-areas: "empty contact_form_middle_img";
+        grid-template-areas: "empty contact_form_middle_img";
   }
   .contact_form_middle_img {
     min-height: 562px;
@@ -504,12 +589,15 @@ input[type="checkbox"]:checked + label:after {
     position: absolute;
     width: 40%;
     top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
     left: 0;
     padding: 0;
   }
   .contact_form_middle_wraper_text_title,
   .contact_form_bottom_wraper_text_title {
+    -ms-grid-column-align: left;
     justify-self: left;
   }
   .about_us {
@@ -517,6 +605,7 @@ input[type="checkbox"]:checked + label:after {
     padding-right: 0;
   }
   .about_us_post_wraper {
+    -ms-grid-columns: 1fr 40px 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
@@ -527,11 +616,13 @@ input[type="checkbox"]:checked + label:after {
     grid-area: about_us_post_img_even;
   }
   .about_us_post_odd {
+    -ms-grid-rows: 1fr auto;
     grid-template-rows: 1fr auto;
   }
   .about_us_post_even {
+    -ms-grid-rows: auto 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas:
+        grid-template-areas:
       "about_us_post_img_even"
       "about_us_text_block_even";
   }
@@ -556,10 +647,13 @@ input[type="checkbox"]:checked + label:after {
     grid-area: carousel__slide_4;
   }
   .carousel {
+    display: -ms-grid;
     display: grid;
-    grid-template: auto auto auto / 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+        grid-template: auto auto auto / 1fr 1fr 1fr;
     gap: 30px;
-    grid-template-areas:
+        grid-template-areas:
       "showcase_post_text_desktop showcase_post_text_desktop carousel__slide_3"
       "carousel__slide_1 carousel__slide_2 carousel__slide_3"
       "carousel__slide_1 carousel__slide_2 carousel__slide_4";
@@ -569,15 +663,18 @@ input[type="checkbox"]:checked + label:after {
     overflow: hidden;
     min-height: 100%;
     max-height: 727px;
+    -o-object-fit: cover;
     object-fit: cover;
   }
-  .carousel__slide_3, .carousel__slide_4 {
+  .carousel__slide_3,
+  .carousel__slide_4 {
     max-height: 497px;
   }
   .contact_form_wraper_text {
     padding-right: 0;
   }
   .contact_form_bottom_wraper {
+    -ms-grid-columns: 49% 51%;
     grid-template-columns: 49% 51%;
     position: relative;
   }
@@ -589,22 +686,29 @@ input[type="checkbox"]:checked + label:after {
     width: 720px;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
   .contact_form_bottom_wraper_text {
     position: absolute;
     top: 50%;
     width: 44%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
     right: 0;
     padding: 0;
   }
   footer {
-      display: grid;
+    display: -ms-grid;
+    display: grid;
   }
   .footer_container {
+    -ms-grid-columns: 1fr 3fr 1fr;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas:
+    -ms-grid-rows: auto 24px auto;
+        grid-template-areas:
       "logo contacts social_menu_footer"
       ". copywrite .";
     padding-top: 64px;
@@ -613,6 +717,7 @@ input[type="checkbox"]:checked + label:after {
   }
   .logo {
     grid-area: logo;
+    -ms-grid-column-align: start;
     justify-self: start;
   }
   .contacts {
@@ -620,10 +725,109 @@ input[type="checkbox"]:checked + label:after {
   }
   .social_menu_footer {
     grid-area: social_menu_footer;
+    -ms-grid-column-align: end;
     justify-self: end;
   }
   .copywrite {
     grid-area: copywrite;
+  }
+  .banner_img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .banner_text_block {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .contacts {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .social_menu_footer {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .copywrite {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .showcase_post_text_desktop {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .carousel__slide_1 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+  }
+  .carousel__slide_2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 3;
+  }
+  .carousel__slide_3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 5;
+  }
+  .carousel__slide_4 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about_us_text_block_even {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .about_us_post_img_even {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact_form_middle_img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .empty {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .philosophy_post_text_even {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .philosophy_img_even {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .philosophy_post_text_odd {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .philosophy_img_odd {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
   }
 }
 @media screen and (min-width: 992px) {
@@ -638,6 +842,8 @@ input[type="checkbox"]:checked + label:after {
   .banner_contact_form,
   .contact_form_middle_form {
     gap: 0;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr 0 auto;
     grid-template: 1fr / 1fr auto;
   }
   .absolute {
@@ -666,6 +872,8 @@ input[type="checkbox"]:checked + label:after {
   }
   .contact_form_middle_form {
     gap: 0;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 301px 0 170px;
     grid-template: 1fr / 301px 170px;
   }
   .banner_text {
@@ -683,6 +891,7 @@ input[type="checkbox"]:checked + label:after {
   }
   .parent_img img {
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   .philosophy {
@@ -695,6 +904,8 @@ input[type="checkbox"]:checked + label:after {
     height: 614px;
   }
   .philosophy_post {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: start;
     gap: 80px;
   }
@@ -712,9 +923,11 @@ input[type="checkbox"]:checked + label:after {
     gap: 80px;
   }
   .about_us_post_odd {
+    -ms-grid-rows: 1fr 400px;
     grid-template-rows: 1fr 400px;
   }
   .about_us_post_even {
+    -ms-grid-rows: 400px 1fr;
     grid-template-rows: 400px 1fr;
   }
   .about_us_post,
@@ -728,6 +941,7 @@ input[type="checkbox"]:checked + label:after {
     gap: 0;
   }
   .showcase_post_text_desktop {
+    display: -ms-grid;
     display: grid;
     gap: 48px;
   }
@@ -739,6 +953,7 @@ input[type="checkbox"]:checked + label:after {
   }
   .contact_form_bottom_wraper_text {
     padding: 210px 0 210px 130px;
+    -ms-flex-line-pack: center;
     align-content: center;
   }
   .contact_form_bottom_img {
@@ -757,6 +972,7 @@ input[type="checkbox"]:checked + label:after {
 }
 @media screen and (min-width: 2100px) {
   .carousel {
+    -ms-grid-rows: 317px 30px 250px 30px 547px;
     grid-template-rows: 317px 250px 547px;
     gap: 30px;
   }
@@ -774,6 +990,8 @@ input[type="checkbox"]:checked + label:after {
   height: auto;
   width: 100%;
   font-size: 18px;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .modal_checkbox {
@@ -798,14 +1016,20 @@ input[type="checkbox"]:checked + label:after {
   height: 400px;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 15;
   background: url(../images/pop_up/popup.png);
   background-size: cover;
   background-position: center;
   z-index: 999;
+  display: -ms-grid;
   display: grid;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: end;
+  -ms-flex-line-pack: start;
   align-content: start;
 }
 .window_text {
