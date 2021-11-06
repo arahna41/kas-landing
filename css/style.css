@@ -304,7 +304,6 @@ input[type="checkbox"]:checked + label:after {
 .showcase_post_text_desktop {
   display: none;
 }
-
 .carousel {
   height: 100%;
   margin-bottom: 8px;
@@ -336,7 +335,6 @@ input[type="checkbox"]:checked + label:after {
 .carousel__slide {
   min-height: 546px;
 }
-
 .carousel__dots {
   top: calc(100% + 0.2rem);
 }
