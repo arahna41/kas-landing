@@ -304,7 +304,6 @@ input[type="checkbox"]:checked + label:after {
 .showcase_post_text_desktop {
   display: none;
 }
-
 .carousel {
   height: 100%;
   margin-bottom: 8px;
@@ -336,7 +335,6 @@ input[type="checkbox"]:checked + label:after {
 .carousel__slide {
   min-height: 546px;
 }
-
 .carousel__dots {
   top: calc(100% + 0.2rem);
 }
@@ -628,37 +626,70 @@ input[type="checkbox"]:checked + label:after {
   }
   .showcase_post_text {
     display: none;
-    grid-area: showcase_post_text;
   }
-  .showcase_post_text_desktop {
-    grid-area: showcase_post_text_desktop;
-    display: block;
-  }
-  .carousel__slide_1 {
-    grid-area: carousel__slide_1;
-  }
-  .carousel__slide_2 {
-    grid-area: carousel__slide_2;
-  }
-  .carousel__slide_3 {
-    grid-area: carousel__slide_3;
-  }
-  .carousel__slide_4 {
-    grid-area: carousel__slide_4;
-  }
-  .carousel {
-    display: -ms-grid;
+  .showcase {
+    padding-bottom: 0;
+}
+  .showcase_post_desktop {
+    grid-area: showcase_post_desktop;
     display: grid;
-    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
-    -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
-        grid-template: auto auto auto / 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  .showcase_post {
+    display: none;
+  }
+  .one {
+    grid-area: one;
+    display: grid;
     gap: 30px;
-        grid-template-areas:
+    grid-template: auto auto / 1fr 1fr;
+    grid-template-areas: 
+      "showcase_post_desktop showcase_post_desktop"
+      "slide_1 slide_2";
+  }
+  .two {
+    grid-area: two;
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 1fr 1fr;
+  }
+  .slide_1 {
+    grid-area: slide_1;
+    overflow: hidden;
+  }
+  .slide_2 {
+    grid-area: slide_2;
+    overflow: hidden;
+  }
+  .slide_3 {
+    overflow: hidden;
+  }
+  .slide_4 {
+    overflow: hidden;
+  }
+  .showcase_post_2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    grid-template-areas: 
+      "one two";
+    grid-template-rows: 715px;
+  }
+  /* .carousel { */
+
+   /*  display: -ms-grid;
+    display: grid;
+    grid-template: auto / 2fr 1fr; */
+  /*   -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
+    -ms-grid-columns: 1fr 30px 1fr 30px 1fr; */
+   /*      grid-template: auto auto auto / 1fr 1fr 1fr;
+    gap: 30px; */
+    /*     grid-template-areas:
       "showcase_post_text_desktop showcase_post_text_desktop carousel__slide_3"
       "carousel__slide_1 carousel__slide_2 carousel__slide_3"
-      "carousel__slide_1 carousel__slide_2 carousel__slide_4";
-  }
-  .carousel__slide {
+      "carousel__slide_1 carousel__slide_2 carousel__slide_4"; */
+  /* } */
+  /*.carousel__slide {
     padding: 0;
     overflow: hidden;
     min-height: 100%;
@@ -669,7 +700,7 @@ input[type="checkbox"]:checked + label:after {
   .carousel__slide_3,
   .carousel__slide_4 {
     max-height: 497px;
-  }
+  } */
   .contact_form_wraper_text {
     padding-right: 0;
   }
@@ -677,6 +708,7 @@ input[type="checkbox"]:checked + label:after {
     -ms-grid-columns: 49% 51%;
     grid-template-columns: 49% 51%;
     position: relative;
+    margin-top: 80px;
   }
   .contact_form_bottom_img {
     min-height: 410px;
@@ -766,7 +798,7 @@ input[type="checkbox"]:checked + label:after {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
   }
-  .carousel__slide_1 {
+ /*  .carousel__slide_1 {
     -ms-grid-row: 3;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
@@ -784,7 +816,7 @@ input[type="checkbox"]:checked + label:after {
   .carousel__slide_4 {
     -ms-grid-row: 5;
     -ms-grid-column: 5;
-  }
+  } */
 }
 
 @media screen and (min-width: 768px) {
@@ -861,8 +893,16 @@ input[type="checkbox"]:checked + label:after {
   .footer_container {
     row-gap: 24px;
   }
+
+
+  .showcase_post_2 {
+    grid-template-rows: 840px;
+  }
 }
 @media screen and (min-width: 1200px) {
+  .showcase_post_2 {
+    grid-template-rows: 923px;
+  }
   .banner_title {
     font-size: 2.8rem;
   }
@@ -940,14 +980,14 @@ input[type="checkbox"]:checked + label:after {
   .showcase_post {
     gap: 0;
   }
-  .showcase_post_text_desktop {
+  /* .showcase_post_text_desktop {
     display: -ms-grid;
     display: grid;
     gap: 48px;
-  }
-  .carousel {
+  } */
+  /* .carousel {
     gap: 30px;
-  }
+  } */
   .contact_form_bottom_wraper {
     margin-top: 140px;
   }
@@ -968,13 +1008,6 @@ input[type="checkbox"]:checked + label:after {
   .footer_container {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-}
-@media screen and (min-width: 2100px) {
-  .carousel {
-    -ms-grid-rows: 317px 30px 250px 30px 547px;
-    grid-template-rows: 317px 250px 547px;
-    gap: 30px;
   }
 }
 
