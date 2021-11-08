@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Keep Austin Sexy — Personal freedom fitness apparel</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+        <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style_system.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -135,21 +136,21 @@
                         <p class="showcase_post_text_descr text_16">Neque, purus diam sit duis nam. Dolor neque, eu quis viverra ornare cras. Lacus viverra sed sagittis, purus non malesuada adipiscing urna. <br><br>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero libero commodo odio nisi, integer morbi vitae tellus justo. Neque, purus diam sit duis nam. </p>
                     </div>
-                    <div id="myCarousel" class="showcase_post_slider carousel w-10/12 max-w-5xl mx-auto">
-                        <div class="carousel__slide carousel__slide_1">
-                            <img src="images/popular_gallery_1.jpg" />
-                        </div>
-                        <div class="carousel__slide carousel__slide_2">
-                            <img src="images/popular_gallery_2.jpg" />
-                        </div>
-                        <div class="carousel__slide carousel__slide_3">
-                            <img src="images/popular_gallery_3.jpg" />
-                        </div>
-                        <div class="carousel__slide carousel__slide_4">
-                            <img src="images/popular_gallery_4.jpg" />
-                        </div>
-                    </div>
                 </div>
+                <div class="owl-carousel">
+                    <div class="slide_1 carousel__slide">
+                        <img src="images/popular_gallery_1.jpg" />
+                    </div>
+                    <div class="slide_2 carousel__slide">
+                        <img src="images/popular_gallery_2.jpg" />
+                    </div>
+                    <div class="slide_3 carousel__slide">
+                        <img src="images/popular_gallery_3.jpg" />
+                    </div>
+                    <div class="slide_4 carousel__slide">
+                        <img src="images/popular_gallery_4.jpg" />
+                    </div>
+                  </div>
                 <div class="showcase_post_2">
                     <div class="one">
                         <div class="showcase_post_desktop">
@@ -228,10 +229,16 @@
                 <p class="copywrite text_16"> &copy; Keep Austin Sexy. All rights reserved</p>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="owlcarousel/owl.carousel.min.js"></script>
+		<script>
+			$('.owl-carousel').owlCarousel({
+                margin:12,
+                autoWidth:true,
+                items:4,
+                dotsEach:true,
+            })
+		</script>
         <script src="js/script.js"></script>
     </body>
 </html>
-
-
-<!-- Error message -> Incorrect format -->

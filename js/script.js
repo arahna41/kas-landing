@@ -1,5 +1,5 @@
 /* Initialise carousel */
-const mediaQuery = window.matchMedia("(max-width: 767px)");
+/* const mediaQuery = window.matchMedia("(max-width: 767px)");
 if (mediaQuery.matches) {
   var myCarousel = new Carousel(document.querySelector(".carousel"), {
     preload: 2,
@@ -9,7 +9,7 @@ if (mediaQuery.matches) {
     slidesPerPage: 1,
   });
 };
-
+ */
 window.addEventListener("resize", function() {
   if (window.matchMedia("(min-width: 500px)").matches) {
       console.log("Screen width is at least 500px");
@@ -84,3 +84,8 @@ field.addEventListener("click", fieldClick);
 function fieldClick() {
   content.classList.add("fixed_none");
 }
+
+
+$(document).ready(function(){
+  $('#owl-carousel-1').owlCarousel();
+});
