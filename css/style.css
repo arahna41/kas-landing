@@ -298,9 +298,7 @@ input[type="checkbox"]:checked + label:after {
 .about_us_post {
   padding-bottom: 4px;
 }
-.showcase_post_text_desktop {
-  display: none;
-}
+
 .showcase_post_2 {
   display: none;
 }
@@ -701,6 +699,7 @@ input[type="checkbox"]:checked + label:after {
       "one two";
     grid-template-rows: 715px;
   }
+  
   /* .carousel { */
 
    /*  display: -ms-grid;

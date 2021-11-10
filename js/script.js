@@ -10,13 +10,6 @@ if (mediaQuery.matches) {
   });
 };
  */
-window.addEventListener("resize", function() {
-  if (window.matchMedia("(min-width: 500px)").matches) {
-      console.log("Screen width is at least 500px");
-  } else {
-      console.log("Screen less than 500px");
-  }
-});
 
 
 
@@ -84,8 +77,3 @@ field.addEventListener("click", fieldClick);
 function fieldClick() {
   content.classList.add("fixed_none");
 }
-
-
-$(document).ready(function(){
-  $('#owl-carousel-1').owlCarousel();
-});
