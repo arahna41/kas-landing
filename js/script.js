@@ -12,7 +12,6 @@ if (mediaQuery.matches) {
  */
 
 
-
 var linkNav = document.querySelectorAll('[href^="#"]'),
   V = 0.2;
 for (var i = 0; i < linkNav.length; i++) {
