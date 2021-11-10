@@ -1,16 +1,18 @@
 /* Initialise carousel */
-/* const mediaQuery = window.matchMedia("(max-width: 767px)");
-if (mediaQuery.matches) {
-  var myCarousel = new Carousel(document.querySelector(".carousel"), {
-    preload: 2,
-    infinite: false,
-    center: true,
-    fill: true,
-    slidesPerPage: 1,
+$(window).on("load", function () {
+  $(".owl-carousel").owlCarousel({
+    margin: 12,
+    dotsEach: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      350: {
+        items: 2,
+      },
+    },
   });
-};
- */
-
+});
 
 var linkNav = document.querySelectorAll('[href^="#"]'),
   V = 0.2;
@@ -49,7 +51,7 @@ const close = document.getElementById("checkbox");
 link.addEventListener("click", linkClick);
 
 function linkClick() {
-  document.getElementById('checkbox').checked = false;
+  document.getElementById("checkbox").checked = false;
 }
 
 const btn = document.querySelector(".button");
