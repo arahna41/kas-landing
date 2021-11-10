@@ -298,65 +298,32 @@ input[type="checkbox"]:checked + label:after {
 .about_us_post {
   padding-bottom: 4px;
 }
-.showcase_post_text_desktop {
-  display: none;
-}
+
 .showcase_post_2 {
   display: none;
 }
-.owl-carousel {
-  width: 100vw;
-  padding: 0 20px;
+.carousel {
   height: 546px;
 }
-.owl-item {
-  padding: 0;
+.carousel-item {
+  padding: 0 6px;
 }
-.carousel__slide img {
+.carousel-item:first-of-type {
+  padding: 0 0 0 14px;
+}
+.carousel-item:last-of-type {
+  padding: 0 14px 0 0;
+}
+.carousel-item img {
   height: 546px;
+  width: 277.88px;
 }
-/* .carousel__slide {
-  width: calc(100vw - 40px);
+
+
+.carousel-indicators {
+  bottom: -19px;
 }
-.owl-item {
-  width: calc(100vw - 40px);
-} */
-/* .carousel {
-  height: 100%;
-  margin-bottom: 8px;
-}
-.carousel__button {
-  display: none;
-}
-*//* .carousel__slide {
-  width: 100%;
-  max-width: 335px;
-  padding: 0 16px;
-}
-.carousel__slide img {
-  height: 100%;
-  max-width: 335px;
-} *//*
-.carousel__track:first-child {
-  padding-left: 20px;
-}
-.carousel__track:last-child {
-  padding-right: 20px;
-}
-.carousel__slide.is-selected {
-  padding: 0;
-}
-.carousel__track,
-.carousel__slide {
-  min-height: 546px;
-}*/
-.owl-carousel .owl-dots.disabled {
-  display: block;
-}
-.owl-dots {
-  text-align: center;
-}
-.owl-carousel button.owl-dot {
+.carousel-indicators li {
   background: #ffffff;
   border: 0.5px solid #333333;
   border-radius: 50%;
@@ -364,7 +331,7 @@ input[type="checkbox"]:checked + label:after {
   height: 12px;
   margin: 0 3px;
 }
-.owl-carousel button.owl-dot.active {
+.carousel-indicators li.active {
   background: #333333;
 }
 .contact_form_bottom_wraper {
@@ -451,14 +418,14 @@ input[type="checkbox"]:checked + label:after {
 }
 
 @media screen and (min-width: 768px) {
-  .owl-carousel.owl-loaded {
+  .carousel {
     display: none;
   }
   body {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-  .container {
+  .wraper {
     -ms-grid-column-align: center;
     justify-self: center;
     max-width: 1170px;
@@ -701,6 +668,7 @@ input[type="checkbox"]:checked + label:after {
       "one two";
     grid-template-rows: 715px;
   }
+  
   /* .carousel { */
 
    /*  display: -ms-grid;
