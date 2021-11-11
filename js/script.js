@@ -8,6 +8,9 @@ $(window).on("load", function () {
       0: {
         items: 1,
       },
+      500: {
+        items: 2,
+      },
     },
   });
 });
