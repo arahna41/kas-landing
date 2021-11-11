@@ -2,13 +2,11 @@
 $(window).on("load", function () {
   $(".owl-carousel").owlCarousel({
     margin: 12,
+    stagePadding: 20,
     dotsEach: true,
     responsive: {
       0: {
         items: 1,
-      },
-      350: {
-        items: 2,
       },
     },
   });

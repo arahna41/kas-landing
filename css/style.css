@@ -893,7 +893,19 @@ input[type="checkbox"]:checked + label:after {
 }
 @media screen and (min-width: 1200px) {
   .showcase_post_2 {
-    grid-template-rows: 923px;
+    grid-template-rows: 1024px;
+  }
+  .one {
+    align-content: space-between;
+  }
+  .showcase_post_desktop {
+    gap: 48px;
+  }
+  .slide_1, .slide_2 {
+    height: 727px;
+  }
+  .slide_1, .slide_2, .slide_3, .slide_4 {
+    width: 370px;
   }
   .banner_title {
     font-size: 2.8rem;
