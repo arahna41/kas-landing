@@ -4,7 +4,6 @@ $(window).on("load", function () {
     margin: 12,
     stagePadding: 20,
     dotsEach: true,
-    stagePadding:20,
     responsive: {
       0: {
         items: 1,
@@ -16,6 +15,7 @@ $(window).on("load", function () {
   });
 });
 
+/*Scroll*/
 var linkNav = document.querySelectorAll('[href^="#"]'),
   V = 0.2;
 for (var i = 0; i < linkNav.length; i++) {
@@ -55,24 +55,4 @@ for (let elem of elements) {
   function navLinkClick() {
     document.getElementById("checkbox").checked = false;
   }
-}
-
-
-const btn = document.querySelector(".button");
-const content = document.querySelector(".fixed");
-btn.addEventListener("click", btnClick);
-function btnClick() {
-  content.classList.toggle("fixed_none");
-}
-
-const cross = document.querySelector(".close");
-cross.addEventListener("click", crossClick);
-function crossClick() {
-  content.classList.add("fixed_none");
-}
-
-const field = document.querySelector(".fixed");
-field.addEventListener("click", fieldClick);
-function fieldClick() {
-  content.classList.add("fixed_none");
 }
